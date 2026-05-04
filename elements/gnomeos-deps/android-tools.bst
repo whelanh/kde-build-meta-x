@@ -1,10 +1,10 @@
 kind: cmake
-description: ADB and fastboot Android platform tools (nmeum community fork)
+description: ADB and fastboot Android platform tools (nmeum community fork) v34.0.5
 
 sources:
 - kind: tar
-  url: github_files:nmeum/android-tools/releases/download/34.0.1/android-tools-34.0.1.tar.xz
-  ref: 60234ecbca19a17a7e2f46a4581960d645b7c55b870d924a21494c76a6f548ec
+  url: github_files:nmeum/android-tools/releases/download/34.0.5/android-tools-34.0.5.tar.xz
+  ref: fb09cff12cfb82acf42a8ebebbc0342671bfcd02117716368bdc73fdda60304a
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst

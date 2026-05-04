@@ -10,7 +10,6 @@ sources:
 variables:
   autogen: |
     echo "1.1.0" > .tarball-version
-    sed -i '/AC_SYS_LARGEFILE/d' configure.ac
     autoreconf -ivf
   conf-local: --disable-static
 
@@ -21,3 +20,8 @@ build-depends:
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/parted.bst
+
+config:
+  build-commands:
+  - find . -name Makefile | xargs -r sed -i 's/-D_FILE_OFFSET_BITS=[[:blank:]]/-D_FILE_OFFSET_BITS=64 /g; s/-D_FILE_OFFSET_BITS=$/-D_FILE_OFFSET_BITS=64/g' || true
+  - make %{make-args}
