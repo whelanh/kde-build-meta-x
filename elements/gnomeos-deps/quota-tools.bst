@@ -10,7 +10,7 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 - freedesktop-sdk.bst:components/e2fsprogs.bst
 - freedesktop-sdk.bst:components/libnl.bst
-- freedesktop-sdk.bst:components/dbus-base.bst
+- freedesktop-sdk.bst:components/libdbus.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst

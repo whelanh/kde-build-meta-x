@@ -42,6 +42,10 @@ variables:
     --enable-fax-build
     --disable-doc-build
 
+environment:
+  # cupsext.c has implicit function declarations (internal rename issue in 3.25.8)
+  CFLAGS: "%{cflags} -Wno-implicit-function-declaration"
+
 config:
   install-commands:
     (>):
