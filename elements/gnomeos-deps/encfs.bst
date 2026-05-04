@@ -25,7 +25,7 @@ variables:
     -DUSE_INTERNAL_EASYLOGGING=ON
     -DENABLE_NLS=OFF
     -DFUSE_INCLUDE_DIR="%{prefix}/include/fuse3"
-    -DFUSE_LIBRARIES="%{prefix}/%{libdir}/libfuse3.so"
+    -DFUSE_LIBRARIES="%{libdir}/libfuse3.so"
 
 config:
   configure-commands:
