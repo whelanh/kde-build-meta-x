@@ -3,8 +3,8 @@ description: High-quality printer drivers for CUPS (Gutenprint 5.3.4)
 
 sources:
 - kind: tar
-  url: tar_https:downloads.sourceforge.net/project/gimp-print/gutenprint-5.3/5.3.4/gutenprint-5.3.4.tar.xz
-  ref: db44a701d2b8e6a8931c83cec06c91226be266d23e5c189d20a39dd175f2023b
+  url: tar_https:deb.debian.org/debian/pool/main/g/gutenprint/gutenprint_5.3.4.20220624T01008808d602.orig.tar.xz
+  ref: ef514d4ca567b5871cfe7697127bee2c14d5d71d7fbc68d8fee96b0faaed90e7
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst

@@ -4,7 +4,7 @@ description: JPEG XR codec library
 sources:
 - kind: tar
   url: tar_https:github.com/mircomir/jxrlib/archive/refs/tags/1.3.2.tar.gz
-  ref: 63730442f5fd6c5a79395bdd199040ab3821c229066049f52a57424a984b16ed
+  ref: 93d424d2fa697e88bbc4f74fa3db10491e77c83f4dcbdb3a8296a8d16242c16d
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
