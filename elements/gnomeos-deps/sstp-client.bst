@@ -3,7 +3,7 @@ description: SSTP (Secure Socket Tunneling Protocol) client
 
 sources:
 - kind: tar
-  url: https://gitlab.com/sstp-project/sstp-client/-/archive/1.0.20/sstp-client-1.0.20.tar.gz
+  url: gitlab_files:sstp-project/sstp-client/-/archive/1.0.20/sstp-client-1.0.20.tar.gz
   ref: sha256:9150c96c61c71aa3fd0ac7c2b95f60cecb8bf761febb07e00e34794c47eac9fa
 
 build-depends:
