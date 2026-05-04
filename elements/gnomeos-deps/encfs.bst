@@ -31,4 +31,5 @@ variables:
 config:
   configure-commands:
   - find . -name CMakeLists.txt | xargs sed -i 's/cmake_minimum_required(VERSION 2\.[0-9]*)/cmake_minimum_required(VERSION 3.5)/'
+  - find . -name CMakeLists.txt | xargs sed -i 's/cmake_policy(SET CMP0063 OLD)/cmake_policy(SET CMP0063 NEW)/'
   - cmake -B%{build-dir} -H"%{conf-root}" -G"%{generator}" %{cmake-args}

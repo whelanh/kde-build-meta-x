@@ -12,6 +12,7 @@ build-depends:
 - freedesktop-sdk.bst:components/python3.bst
 - freedesktop-sdk.bst:components/perl.bst
 - freedesktop-sdk.bst:components/go.bst
+- freedesktop-sdk.bst:components/sed.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
