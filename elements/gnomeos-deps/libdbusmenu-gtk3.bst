@@ -21,13 +21,17 @@ depends:
 
 variables:
   # Tarball has configure.ac but no generated configure.
-  # autoreconf invokes gtkdocize for GTK_DOC_CHECK; gtk-doc is not installed.
-  # /usr/bin is read-only in the sandbox, so create stub in source dir and prepend to PATH.
+  # autoreconf needs gtkdocize (stub it) and newer automake requires EXTRA_DIST = before +=.
   autogen: |
     mkdir -p m4 _bin
     printf 'AC_DEFUN([GTK_DOC_CHECK],[AM_CONDITIONAL([ENABLE_GTK_DOC],[false])])\n' > m4/gtk-doc.m4
+    # gtkdocize stub (creates required gtk-doc.make placeholder)
     printf '#!/bin/sh\ntouch gtk-doc.make\n' > _bin/gtkdocize
     chmod +x _bin/gtkdocize
+    # Fix EXTRA_DIST += without prior = in docs Makefile.am (newer automake rejects this)
+    sed -i '0,/^EXTRA_DIST +=/s/^EXTRA_DIST +=/EXTRA_DIST =/' \
+      docs/libdbusmenu-glib/reference/Makefile.am \
+      docs/libdbusmenu-gtk/reference/Makefile.am
     PATH="$(pwd)/_bin:$PATH" autoreconf -ivf .
   conf-local: >-
     --enable-gtk=3

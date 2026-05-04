@@ -18,3 +18,14 @@ variables:
     PREFIX=%{prefix}
     SBINDIR=%{sbindir}
     MANDIR=%{mandir}
+
+config:
+  # xl2tpd Makefile does not support DESTDIR; pass all install paths with install-root prefix
+  install-commands:
+  - |
+    make -j1 \
+      PREFIX="%{install-root}%{prefix}" \
+      SBINDIR="%{install-root}%{sbindir}" \
+      BINDIR="%{install-root}%{bindir}" \
+      MANDIR="%{install-root}%{mandir}" \
+      install
