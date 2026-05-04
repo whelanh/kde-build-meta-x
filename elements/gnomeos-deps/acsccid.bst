@@ -12,6 +12,9 @@ variables:
     echo "1.1.13" > .tarball-version
     autoreconf -ivf
 
+environment:
+  ACLOCAL_PATH: /usr/share/gettext/m4
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 - freedesktop-sdk.bst:components/gettext.bst
