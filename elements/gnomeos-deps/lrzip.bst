@@ -12,6 +12,7 @@ build-depends:
 depends:
 - freedesktop-sdk.bst:components/lzo.bst
 - freedesktop-sdk.bst:components/bzip2.bst
+- freedesktop-sdk.bst:components/lz4.bst
 - freedesktop-sdk.bst:components/xz.bst
 
 variables:
