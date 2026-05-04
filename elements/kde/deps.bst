@@ -173,6 +173,19 @@ depends:
 # VM guest integration
 - gnomeos-deps/qemu-guest-agent.bst
 
+# XDG portal backends
+- gnomeos-deps/xdg-desktop-portal-gtk.bst
+
+# Archive format support (Ark)
+- gnomeos-deps/lzop.bst
+- gnomeos-deps/lrzip.bst
+
+# Audio encoding/decoding
+- gnomeos-deps/opus-tools.bst
+
+# RAW image support (Gwenview/digiKam)
+- gnomeos-deps/libraw.bst
+
 (?):
 - arch == "aarch64":
     depends:
