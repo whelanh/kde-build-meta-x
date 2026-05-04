@@ -18,6 +18,7 @@ build-depends:
 
 depends:
 - freedesktop-sdk.bst:components/avahi-libs.bst
+- freedesktop-sdk.bst:components/libusb.bst
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:

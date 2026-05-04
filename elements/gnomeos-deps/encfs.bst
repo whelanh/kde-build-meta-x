@@ -32,4 +32,8 @@ config:
   configure-commands:
   - find . -name CMakeLists.txt | xargs sed -i 's/cmake_minimum_required(VERSION 2\.[0-9]*)/cmake_minimum_required(VERSION 3.5)/'
   - find . -name CMakeLists.txt | xargs sed -i 's/cmake_policy(SET CMP0063 OLD)/cmake_policy(SET CMP0063 NEW)/'
+  - |
+    # fuse3 changed fuse_unmount(mountpoint, chan) -> fuse_unmount(fuse*); patch to no-op
+    sed -i 's/fuse_unmount(mountPoint, nullptr);/(void)mountPoint; \/\/ fuse3: unmount handled by fuse_loop/' \
+      encfs/FileUtils.cpp
   - cmake -B%{build-dir} -H"%{conf-root}" -G"%{generator}" %{cmake-args} -DCMAKE_C_FLAGS="-DFUSE_USE_VERSION=31" -DCMAKE_CXX_FLAGS="-DFUSE_USE_VERSION=31"
