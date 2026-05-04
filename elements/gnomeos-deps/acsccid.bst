@@ -10,6 +10,8 @@ sources:
 variables:
   autogen: |
     echo "1.1.13" > .tarball-version
+    mkdir -p config
+    cp /usr/share/gettext/config.rpath config/
     autoreconf -ivf
 
 environment:

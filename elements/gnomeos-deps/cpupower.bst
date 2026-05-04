@@ -10,6 +10,7 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
 - freedesktop-sdk.bst:components/gettext.bst
+- freedesktop-sdk.bst:components/pciutils.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
