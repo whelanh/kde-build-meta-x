@@ -21,13 +21,14 @@ depends:
 
 variables:
   # Tarball has configure.ac but no generated configure.
-  # autoreconf calls gtkdocize for GTK_DOC_CHECK; stub it since gtk-doc not installed.
+  # autoreconf invokes gtkdocize for GTK_DOC_CHECK; gtk-doc is not installed.
+  # /usr/bin is read-only in the sandbox, so create stub in source dir and prepend to PATH.
   autogen: |
-    mkdir -p m4
+    mkdir -p m4 _bin
     printf 'AC_DEFUN([GTK_DOC_CHECK],[AM_CONDITIONAL([ENABLE_GTK_DOC],[false])])\n' > m4/gtk-doc.m4
-    printf '#!/bin/sh\ntouch gtk-doc.make\n' > /usr/bin/gtkdocize
-    chmod +x /usr/bin/gtkdocize
-    autoreconf -ivf .
+    printf '#!/bin/sh\ntouch gtk-doc.make\n' > _bin/gtkdocize
+    chmod +x _bin/gtkdocize
+    PATH="$(pwd)/_bin:$PATH" autoreconf -ivf .
   conf-local: >-
     --enable-gtk=3
     --disable-gtk-doc
