@@ -43,8 +43,9 @@ variables:
     --disable-doc-build
 
 environment:
-  # cupsext.c has implicit function declarations (internal rename issue in 3.25.8)
-  CFLAGS: "%{cflags} -Wno-implicit-function-declaration"
+  # cupsext.c calls internal functions with old names (renamed in 3.25.8 header);
+  # functions are defined elsewhere so allow implicit declarations to link
+  CFLAGS: -g -O2 -Wno-implicit-function-declaration
 
 config:
   install-commands:
