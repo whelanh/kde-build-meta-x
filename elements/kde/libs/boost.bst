@@ -1,16 +1,25 @@
 kind: manual
-description: Boost C++ Libraries (headers-only install)
+description: Boost C++ Libraries (headers + compiled components for filesystem/thread/chrono/program_options)
 
 build-depends:
-- freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
+- freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 
 variables:
   strip-binaries: ''
+  max-jobs: '%{max-jobs}'
 
 config:
+  configure-commands:
+  - |
+    ./bootstrap.sh --prefix=/usr \
+      --with-libraries=filesystem,thread,chrono,program_options,system,date_time,atomic
+
+  build-commands:
+  - ./b2 -j%{max-jobs} variant=release link=shared threading=multi runtime-link=shared cxxstd=17
+
   install-commands:
-  - install -d "%{install-root}/usr/include"
-  - cp -r boost "%{install-root}/usr/include/"
+  - ./b2 -j%{max-jobs} variant=release link=shared threading=multi runtime-link=shared cxxstd=17 \
+      install --prefix=%{install-root}/usr
 
 sources:
 - kind: tar

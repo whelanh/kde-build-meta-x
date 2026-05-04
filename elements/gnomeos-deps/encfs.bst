@@ -10,6 +10,7 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
 - freedesktop-sdk.bst:components/sed.bst
+- freedesktop-sdk.bst:components/python3.bst
 - freedesktop-sdk.bst:components/fuse3.bst
 - freedesktop-sdk.bst:components/openssl.bst
 
@@ -45,4 +46,61 @@ config:
     # fuse_fill_dir_flags enum: int 0 needs explicit cast in C++
     sed -i 's/filler(buf, name\.c_str(), \&st, 0, 0)/filler(buf, name.c_str(), \&st, 0, (fuse_fill_dir_flags)0)/' \
       encfs/encfs.cpp
+  - |
+    # Patch main.cpp for FUSE3 API changes using Python for reliable multi-line edits
+    python3 << 'PYEOF'
+    import re
+
+    with open('encfs/main.cpp', 'r') as f:
+        src = f.read()
+
+    # 1. Fix encfs_init: add fuse_config* param and remove async_read (removed in FUSE3)
+    src = src.replace(
+        'void *encfs_init(fuse_conn_info *conn) {',
+        'void *encfs_init(fuse_conn_info *conn, struct fuse_config *cfg) { (void)cfg;'
+    )
+    src = re.sub(r'\n\s*conn->async_read\s*=.*\n', '\n', src)
+
+    # 2. Add FUSE3 wrapper functions before int main()
+    wrappers = """
+    // FUSE3 compatibility wrappers: new signatures ignore extra args and delegate
+    static int fuse3_getattr(const char *p, struct stat *s, struct fuse_file_info *fi)
+        { (void)fi; return encfs_getattr(p, s); }
+    static int fuse3_readdir(const char *p, void *b, fuse_fill_dir_t f, off_t o,
+        struct fuse_file_info *fi, enum fuse_readdir_flags flags)
+        { (void)flags; return encfs_readdir(p, b, f, o, fi); }
+    static int fuse3_rename(const char *a, const char *b, unsigned int flags)
+        { (void)flags; return encfs_rename(a, b); }
+    static int fuse3_chmod(const char *p, mode_t m, struct fuse_file_info *fi)
+        { (void)fi; return encfs_chmod(p, m); }
+    static int fuse3_chown(const char *p, uid_t u, gid_t g, struct fuse_file_info *fi)
+        { (void)fi; return encfs_chown(p, u, g); }
+    static int fuse3_truncate(const char *p, off_t o, struct fuse_file_info *fi)
+        { (void)fi; return encfs_truncate(p, o); }
+    static int fuse3_utimens(const char *p, const struct timespec t[2], struct fuse_file_info *fi)
+        { (void)fi; return encfs_utimens(p, t); }
+    """
+    src = src.replace('\nint main(', wrappers + '\nint main(', 1)
+
+    # 3. Point ops to FUSE3 wrappers
+    for old, new in [
+        ('encfs_oper.getattr = encfs_getattr', 'encfs_oper.getattr = fuse3_getattr'),
+        ('encfs_oper.readdir = encfs_readdir', 'encfs_oper.readdir = fuse3_readdir'),
+        ('encfs_oper.rename = encfs_rename',   'encfs_oper.rename = fuse3_rename'),
+        ('encfs_oper.chmod = encfs_chmod',     'encfs_oper.chmod = fuse3_chmod'),
+        ('encfs_oper.chown = encfs_chown',     'encfs_oper.chown = fuse3_chown'),
+        ('encfs_oper.truncate = encfs_truncate', 'encfs_oper.truncate = fuse3_truncate'),
+        ('encfs_oper.utimens = encfs_utimens', 'encfs_oper.utimens = fuse3_utimens'),
+    ]:
+        src = src.replace(old, new)
+
+    # 4. Remove FUSE2-only ops (removed in FUSE3)
+    src = re.sub(r'\n\s*encfs_oper\.utime\s*=.*\n',    '\n', src)
+    src = re.sub(r'\n\s*encfs_oper\.ftruncate\s*=.*\n', '\n', src)
+    src = re.sub(r'\n\s*encfs_oper\.fgetattr\s*=.*\n',  '\n', src)
+
+    with open('encfs/main.cpp', 'w') as f:
+        f.write(src)
+    print("encfs/main.cpp patched for FUSE3")
+    PYEOF
   - cmake -B%{build-dir} -H"%{conf-root}" -G"%{generator}" %{cmake-args} -DCMAKE_C_FLAGS="-DFUSE_USE_VERSION=31" -DCMAKE_CXX_FLAGS="-DFUSE_USE_VERSION=31"
