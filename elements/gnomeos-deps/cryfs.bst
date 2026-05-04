@@ -1,11 +1,5 @@
 kind: cmake
 description: CryFS encrypted filesystem (FUSE-based)
-# NOTE: cryfs 1.0.3 requires boost >=1.84, spdlog, and range-v3,
-# which are not currently provided by freedesktop-sdk.
-# These dependencies must be added before this element can build:
-#   - boost (components/boost.bst or gnomeos-deps/boost.bst)
-#   - spdlog (gnomeos-deps/spdlog.bst)
-#   - range-v3 (gnomeos-deps/range-v3.bst)
 
 sources:
 - kind: tar
@@ -15,14 +9,16 @@ sources:
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
-# TODO: add boost, spdlog, range-v3 elements when available
+- kde/libs/boost.bst
+- gnomeos-deps/spdlog.bst
+- gnomeos-deps/range-v3.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/fuse3.bst
 - freedesktop-sdk.bst:components/openssl.bst
 - freedesktop-sdk.bst:components/curl.bst
-# TODO: add boost, spdlog, range-v3 elements when available
+- kde/libs/boost.bst
 
 variables:
   cmake-local: >-

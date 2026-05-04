@@ -13,6 +13,7 @@ build-depends:
 - freedesktop-sdk.bst:components/python3-setuptools.bst
 - freedesktop-sdk.bst:components/perl.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
+- freedesktop-sdk.bst:components/git.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
