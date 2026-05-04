@@ -20,6 +20,7 @@ depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:
+  autogen: chmod +x configure
   conf-local: >-
     --enable-gtk=3
     --disable-gtk-doc

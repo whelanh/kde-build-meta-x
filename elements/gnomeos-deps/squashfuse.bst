@@ -1,4 +1,4 @@
-kind: cmake
+kind: autotools
 description: FUSE-based filesystem for SquashFS (required by libappimage)
 
 sources:
@@ -7,7 +7,7 @@ sources:
   ref: 7730066d1e9baf0084c71674d168331296921e0d7ae0f34de7307744be4ed568
 
 build-depends:
-- freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
+- freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 - freedesktop-sdk.bst:components/fuse3.bst
 
 depends:
@@ -16,8 +16,8 @@ depends:
 - freedesktop-sdk.bst:components/xz.bst
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
+environment:
+  PKG_CONFIG_PATH: /usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+
 variables:
-  cmake-local: >-
-    -DBUILD_SHARED_LIBS=ON
-    -DENABLE_STATIC=OFF
-    -DUSE_SYSTEM_FUSE=ON
+  conf-local: --disable-static --with-fuse=fuse3
