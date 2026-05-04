@@ -1,4 +1,4 @@
-kind: manual
+kind: autotools
 description: Library for passing menus over DBus (GTK3 variant)
 
 sources:
@@ -19,21 +19,10 @@ depends:
 - freedesktop-sdk.bst:components/dbus.bst
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
-config:
-  configure-commands:
-  - touch gtk-doc.make
-  - autoreconf -ivf .
-  - |
-    ./configure --prefix='%{prefix}' \
-      --libdir='%{libdir}' \
-      --enable-gtk=3 \
-      --disable-gtk-doc \
-      --disable-dumper \
-      --disable-tests \
-      --disable-static
-
-  build-commands:
-  - make -j$(nproc)
-
-  install-commands:
-  - make DESTDIR='%{install-root}' install
+variables:
+  conf-local: >-
+    --enable-gtk=3
+    --disable-gtk-doc
+    --disable-dumper
+    --disable-tests
+    --disable-static
