@@ -11,6 +11,7 @@ variables:
   autogen: |
     echo "1.1.0" > .tarball-version
     autoreconf -ivf
+  conf-local: --disable-static
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
@@ -19,6 +20,4 @@ build-depends:
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/parted.bst
-
-variables:
   conf-local: --disable-static
