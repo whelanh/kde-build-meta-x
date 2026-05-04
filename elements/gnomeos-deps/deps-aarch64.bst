@@ -1,12 +1,5 @@
 kind: stack
-
-depends:
-- gnomeos-deps/81voltd.bst
-- gnomeos-deps/bt-set-addr.bst
-- gnomeos-deps/hexagonrpc.bst
-- gnomeos-deps/pd-mapper.bst
-- gnomeos-deps/postmarketos-firmware.bst
-- gnomeos-deps/qbootctl.bst
-- gnomeos-deps/rmtfs.bst
-- gnomeos-deps/tqftpserv.bst
-- gnomeos-deps/fairphone-firmware.bst
+description: >-
+  KDE Aurora aarch64-specific packages.
+  Qualcomm/mobile packages removed — Aurora targets desktop ARM hardware only.
+  Add arm desktop-specific packages here as needed.

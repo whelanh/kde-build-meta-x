@@ -13,8 +13,6 @@ depends:
 - core-deps/umockdev.bst
 - core-deps/xvfb.bst
 - gnomeos-deps/bpftop.bst
-- gnomeos-deps/deviced.bst
-- gnomeos-deps/grcov.bst
 - gnomeos-deps/just.bst
 - gnomeos-deps/swtpm.bst
 - gnomeos-deps/sysext-utils.bst
@@ -47,4 +45,3 @@ depends:
 - sdk.bst
 
 - gnomeos-deps/qemu-user.bst
-- gnomeos-deps/arch-test.bst

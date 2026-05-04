@@ -15,7 +15,6 @@ build-depends:
 - core-deps/python-dbusmock.bst
 - sdk/gtk-doc.bst
 - sdk/pygobject.bst
-- gnomeos-deps/pam-wrapper.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
