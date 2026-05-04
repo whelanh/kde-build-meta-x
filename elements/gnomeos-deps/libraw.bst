@@ -9,8 +9,8 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 
 depends:
-- freedesktop-sdk.bst:components/libjpeg.bst
-- freedesktop-sdk.bst:components/lcms2.bst
+- freedesktop-sdk.bst:components/jpeg.bst
+- freedesktop-sdk.bst:components/lcms.bst
 
 variables:
   conf-local: --disable-static --disable-jasper --disable-openmp
