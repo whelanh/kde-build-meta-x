@@ -32,7 +32,7 @@ config:
       --disable-static
 
   build-commands:
-  - make %{makejobs}
+  - make -j$(nproc)
 
   install-commands:
   - make DESTDIR='%{install-root}' install
