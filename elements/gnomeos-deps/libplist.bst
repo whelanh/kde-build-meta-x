@@ -4,17 +4,18 @@ description: Library for serialization of property lists (libimobiledevice depen
 sources:
 - kind: git_repo
   url: github:libimobiledevice/libplist.git
-  track: "2.7.0"
-  ref: cf5897a71ea412ea2aeb1e2f6b5ea74d4fabfd8c
+  track: "2.2.0"
+  ref: 2.2.0-0-gc5a30e9267068436a75b5d00fcbf95cb9c1f4dcd
 
 variables:
   autogen: |
-    echo "2.7.0" > .tarball-version
+    echo "2.2.0" > .tarball-version
     autoreconf -ivf
+  conf-local: >-
+    --without-cython
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
-- freedesktop-sdk.bst:components/python3.bst

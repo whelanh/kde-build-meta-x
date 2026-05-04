@@ -8,6 +8,7 @@ sources:
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
+- freedesktop-sdk.bst:components/libxslt.bst
 - sdk/gobject-introspection.bst
 - sdk/vala.bst
 - core-deps/intltool.bst
