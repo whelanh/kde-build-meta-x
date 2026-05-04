@@ -10,6 +10,7 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
 - freedesktop-sdk.bst:components/python3.bst
+- freedesktop-sdk.bst:components/perl.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
