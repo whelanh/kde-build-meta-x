@@ -4,8 +4,8 @@ description: Git-based backup tool
 sources:
 - kind: git_repo
   url: github:bup/bup.git
-  track: bup-0.24b
-  ref: 92b297dcc985c3c72d39661626b8ed022e85277a
+  track: 0.33.10
+  ref: 0fd0f5a8e928c9c93900f9d6f54fec61c855614a
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst

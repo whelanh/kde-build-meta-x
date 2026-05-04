@@ -21,3 +21,8 @@ variables:
     -DUSE_INTERNAL_TINYXML=ON
     -DUSE_INTERNAL_EASYLOGGING=ON
     -DENABLE_NLS=OFF
+
+config:
+  configure-commands:
+  - sed -i 's/cmake_minimum_required(VERSION 2.8)/cmake_minimum_required(VERSION 3.5)/' CMakeLists.txt
+  - cmake -B%{build-dir} -H"%{conf-root}" -G"%{generator}" %{cmake-args}
