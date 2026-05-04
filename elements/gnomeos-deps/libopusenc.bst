@@ -1,10 +1,9 @@
 kind: autotools
 
 sources:
-- kind: git_repo
-  url: xiph:libopusenc.git
-  track: v*
-  ref: v0.3-0-g0dba1bea736ab8bb811409dce80c994a00a2ced9
+- kind: tar
+  url: tar_https:archive.mozilla.org/pub/opus/libopusenc-0.3.tar.gz
+  ref: 55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
