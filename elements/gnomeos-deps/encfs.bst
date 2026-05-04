@@ -24,10 +24,11 @@ variables:
     -DUSE_INTERNAL_TINYXML=ON
     -DUSE_INTERNAL_EASYLOGGING=ON
     -DENABLE_NLS=OFF
+    -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     -DFUSE_INCLUDE_DIR="%{prefix}/include/fuse3"
     -DFUSE_LIBRARIES="%{libdir}/libfuse3.so"
 
 config:
   configure-commands:
-  - sed -i 's/cmake_minimum_required(VERSION 2.8)/cmake_minimum_required(VERSION 3.5)/' CMakeLists.txt
+  - find . -name CMakeLists.txt | xargs sed -i 's/cmake_minimum_required(VERSION 2\.[0-9]*)/cmake_minimum_required(VERSION 3.5)/'
   - cmake -B%{build-dir} -H"%{conf-root}" -G"%{generator}" %{cmake-args}
