@@ -9,8 +9,10 @@ sources:
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 - core-deps/intltool.bst
+- gnomeos-deps/sstp-client.bst
 
 depends:
+- gnomeos-deps/sstp-client.bst
 - sdk/gtk.bst
 - sdk/libsecret.bst
 - core-deps/libnma.bst
