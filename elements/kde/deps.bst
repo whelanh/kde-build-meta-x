@@ -75,6 +75,16 @@ depends:
 # Firewall
 - gnomeos-deps/nftables.bst
 - gnomeos-deps/firewalld.bst
+- gnomeos-deps/ufw.bst
+
+# VPN plugins (NetworkManager)
+- gnomeos-deps/NetworkManager-openvpn.bst
+- gnomeos-deps/NetworkManager-openconnect.bst
+- gnomeos-deps/NetworkManager-vpnc.bst
+- gnomeos-deps/NetworkManager-l2tp.bst
+- gnomeos-deps/NetworkManager-pptp.bst
+- gnomeos-deps/NetworkManager-sstp.bst
+- gnomeos-deps/NetworkManager-strongswan.bst
 
 # Shell and text tools
 - freedesktop-sdk.bst:components/bash-completion.bst
@@ -113,6 +123,16 @@ depends:
 - freedesktop-sdk.bst:components/sbsigntools.bst
 - freedesktop-sdk.bst:components/ccid.bst
 - freedesktop-sdk.bst:components/libva.bst
+- gnomeos-deps/powertop.bst
+- gnomeos-deps/solaar.bst
+- gnomeos-deps/ydotool.bst
+- gnomeos-deps/libratbag.bst
+- gnomeos-deps/steam-devices.bst
+- gnomeos-deps/pam-u2f.bst
+- gnomeos-deps/acsccid.bst
+- gnomeos-deps/usb-modeswitch.bst
+- gnomeos-deps/usbmuxd.bst
+- gnomeos-deps/udev-hid-bpf.bst
 
 # Filesystem support
 # ntfs-3g omitted: modern kernels have ntfs3 built-in (5.15+)
@@ -123,10 +143,16 @@ depends:
 - freedesktop-sdk.bst:components/erofs-utils.bst
 - freedesktop-sdk.bst:components/f2fs-tools.bst
 - freedesktop-sdk.bst:components/lvm2.bst
+- gnomeos-deps/udisks2-btrfs.bst
 
 # Printing and scanning
 - gnomeos-deps/sane-backends.bst
 - gnomeos-deps/sane-airscan.bst
+- gnomeos-deps/cups-browsed.bst
+- gnomeos-deps/ipp-usb.bst
+- gnomeos-deps/gutenprint.bst
+- gnomeos-deps/foomatic-db.bst
+- gnomeos-deps/hplip.bst
 
 # VM support
 - gnomeos-deps/virtiofsd.bst
@@ -157,6 +183,7 @@ depends:
 
 # Shell
 - gnomeos-deps/fish.bst
+- gnomeos-deps/zsh.bst
 
 # Zsh plugins
 - gnomeos-deps/zsh-autosuggestions.bst
@@ -191,6 +218,15 @@ depends:
 # CLI tools (KDE Linux parity)
 - gnomeos-deps/lsof.bst
 - gnomeos-deps/tree.bst
+- gnomeos-deps/alsa-utils.bst
+- gnomeos-deps/inotify-tools.bst
+- gnomeos-deps/espeak-ng.bst
+- gnomeos-deps/drm-info.bst
+- gnomeos-deps/fastfetch.bst
+- gnomeos-deps/lshw.bst
+- gnomeos-deps/wireguard-tools.bst
+- gnomeos-deps/udftools.bst
+- gnomeos-deps/cpupower.bst
 
 # VM guest integration
 - gnomeos-deps/qemu-guest-agent.bst
@@ -201,6 +237,27 @@ depends:
 # Archive format support (Ark)
 - gnomeos-deps/lzop.bst
 - gnomeos-deps/lrzip.bst
+- gnomeos-deps/arj.bst
+- gnomeos-deps/unrar.bst
+
+# Document conversion
+- gnomeos-deps/catdoc.bst
+
+# Backup tools
+- gnomeos-deps/bup.bst
+
+# Encrypted filesystems
+- gnomeos-deps/encfs.bst
+- gnomeos-deps/cryfs.bst
+- gnomeos-deps/gocryptfs.bst
+
+# Filesystem tools
+- freedesktop-sdk.bst:components/exfat-progs.bst
+- gnomeos-deps/fatresize.bst
+- gnomeos-deps/quota-tools.bst
+
+# Android tools (ADB/fastboot)
+- gnomeos-deps/android-tools.bst
 
 # Audio encoding/decoding
 - gnomeos-deps/libopusenc.bst
@@ -212,6 +269,33 @@ depends:
 
 # RAW image support (Gwenview/digiKam)
 - gnomeos-deps/libraw.bst
+
+# Image codecs (HDR/JPEG XR)
+- gnomeos-deps/imath.bst
+- gnomeos-deps/openexr.bst
+- gnomeos-deps/jxrlib.bst
+
+# OCR support (Tesseract)
+- gnomeos-deps/leptonica.bst
+- gnomeos-deps/tesseract-data-eng.bst
+- gnomeos-deps/tesseract.bst
+
+# Fonts
+- gnomeos-deps/noto-fonts-emoji.bst
+
+# Spell check dictionaries
+- gnomeos-deps/hunspell-en_us.bst
+
+# Desktop integration (system tray, app menus)
+- gnomeos-deps/libdbusmenu-gtk3.bst
+- gnomeos-deps/ayatana-ido.bst
+- gnomeos-deps/libayatana-indicator.bst
+- gnomeos-deps/appmenu-gtk-module.bst
+- gnomeos-deps/libappindicator-gtk3.bst
+
+# AppImage support
+- gnomeos-deps/squashfuse.bst
+- gnomeos-deps/libappimage.bst
 
 (?):
 - arch == "aarch64":
