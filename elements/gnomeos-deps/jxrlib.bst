@@ -8,10 +8,12 @@ sources:
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
+- freedesktop-sdk.bst:components/python3.bst
 
 config:
   configure-commands:
   - sed -i 's/CFLAGS=-I\./CFLAGS=-I. -Wno-incompatible-pointer-types/' Makefile
+  - sed -i 's/\bpython\b/python3/g' Makefile
 
   build-commands:
   - make SHARED=1 DIR_BUILD=./build
