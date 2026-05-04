@@ -54,6 +54,10 @@ depends:
 
 # Graphics
 - freedesktop-sdk.bst:vm/mesa-default.bst
+- freedesktop-sdk.bst:components/vulkan-icd-loader.bst
+- freedesktop-sdk.bst:components/libheif.bst
+- freedesktop-sdk.bst:components/libjxl.bst
+- freedesktop-sdk.bst:components/libavif.bst
 
 # Storage
 - freedesktop-sdk.bst:components/btrfs-progs.bst
@@ -79,6 +83,9 @@ depends:
 - freedesktop-sdk.bst:components/less.bst
 - freedesktop-sdk.bst:components/nano.bst
 - freedesktop-sdk.bst:components/vim.bst
+- freedesktop-sdk.bst:components/man-db.bst
+- freedesktop-sdk.bst:components/man-pages.bst
+- freedesktop-sdk.bst:components/plocate.bst
 
 # Git
 - freedesktop-sdk.bst:components/git.bst
@@ -101,10 +108,21 @@ depends:
 - gnomeos-deps/uinput.bst
 - gnomeos-deps/switcheroo-control.bst
 - gnomeos-deps/efibootmgr.bst
+- freedesktop-sdk.bst:components/kmod.bst
+- freedesktop-sdk.bst:components/tpm2-tss.bst
+- freedesktop-sdk.bst:components/sbsigntools.bst
+- freedesktop-sdk.bst:components/ccid.bst
+- freedesktop-sdk.bst:components/libva.bst
 
 # Filesystem support
 # ntfs-3g omitted: modern kernels have ntfs3 built-in (5.15+)
 - gnomeos-deps/btrfsmaintenance.bst
+- freedesktop-sdk.bst:components/e2fsprogs.bst
+- freedesktop-sdk.bst:components/dosfstools.bst
+- freedesktop-sdk.bst:components/xfsprogs.bst
+- freedesktop-sdk.bst:components/erofs-utils.bst
+- freedesktop-sdk.bst:components/f2fs-tools.bst
+- freedesktop-sdk.bst:components/lvm2.bst
 
 # Printing and scanning
 - gnomeos-deps/sane-backends.bst
@@ -121,8 +139,12 @@ depends:
 - gnomeos-deps/iw.bst
 - gnomeos-deps/nss-mdns.bst
 
+# Bluetooth (BlueDevil, KDE Plasma)
+- freedesktop-sdk.bst:components/bluez.bst
+
 # Wayland utilities
 - gnomeos-deps/wl-clipboard.bst
+- freedesktop-sdk.bst:components/xwayland.bst
 
 # Realtime audio privileges
 - gnomeos-deps/realtime-privileges.bst
@@ -183,6 +205,10 @@ depends:
 # Audio encoding/decoding
 - gnomeos-deps/libopusenc.bst
 - gnomeos-deps/opus-tools.bst
+
+# Spell checking and location
+- freedesktop-sdk.bst:components/hunspell.bst
+- freedesktop-sdk.bst:components/geoclue.bst
 
 # RAW image support (Gwenview/digiKam)
 - gnomeos-deps/libraw.bst
