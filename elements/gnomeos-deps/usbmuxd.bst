@@ -2,9 +2,10 @@ kind: autotools
 description: USB multiplexor daemon for iOS/iPadOS device connections
 
 sources:
-- kind: tar
-  url: github_files:libimobiledevice/usbmuxd/releases/download/1.1.1/usbmuxd-1.1.1.tar.bz2
-  ref: e7ce30143e69d77fc5aa6fb0cb5f0cfcdbeff47eb1ac7fd90ac259a90de9fadd
+- kind: git_repo
+  url: github:libimobiledevice/usbmuxd.git
+  track: "1.1.1"
+  ref: 79c8b38d1488a6b07e1e68f39d8caec3f1a45622
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst

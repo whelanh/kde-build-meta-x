@@ -2,9 +2,10 @@ kind: autotools
 description: Library for communicating with iOS devices over USB
 
 sources:
-- kind: tar
-  url: github_files:libimobiledevice/libimobiledevice/releases/download/1.4.0/libimobiledevice-1.4.0.tar.bz2
-  ref: 99e042acc1513815c36816723de52e0d0892e081f36ec29672531ce99ed59ccd
+- kind: git_repo
+  url: github:libimobiledevice/libimobiledevice.git
+  track: "1.4.0"
+  ref: 149f7623c672c1fa73122c7119a12bfc0012f2ac
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst

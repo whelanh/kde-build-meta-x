@@ -4,7 +4,7 @@ description: GTK module to export application menus via DBus (appmenu-gtk-module
 sources:
 - kind: tar
   url: gitlab_files:vala-panel-project/vala-panel-appmenu/-/archive/25.04/vala-panel-appmenu-25.04.tar.gz
-  ref: 0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5
+  ref: 48d0be87b260056a65a9056a9be7e190b67a508540ebcb1fc18a67349cca0177
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
