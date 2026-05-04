@@ -20,7 +20,12 @@ depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:
-  autogen: chmod +x configure
+  # No configure in tarball; need autoreconf, but gtk-doc macros missing.
+  # Inject a stub gtk-doc.m4 so automake can define ENABLE_GTK_DOC conditional.
+  autogen: |
+    mkdir -p m4
+    printf 'AC_DEFUN([GTK_DOC_CHECK],[AM_CONDITIONAL([ENABLE_GTK_DOC],[false])])\n' > m4/gtk-doc.m4
+    autoreconf -ivf .
   conf-local: >-
     --enable-gtk=3
     --disable-gtk-doc
