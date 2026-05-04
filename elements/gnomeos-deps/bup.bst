@@ -1,4 +1,4 @@
-kind: autotools
+kind: make
 description: Git-based backup tool
 
 sources:
@@ -7,13 +7,8 @@ sources:
   track: bup-0.24b
   ref: 92b297dcc985c3c72d39661626b8ed022e85277a
 
-variables:
-  autogen: |
-    echo "0.24b" > .tarball-version
-    autoreconf -ivf
-
 build-depends:
-- freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
+- freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/python3.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
 
@@ -21,3 +16,10 @@ depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/python3.bst
 - freedesktop-sdk.bst:components/openssl.bst
+
+variables:
+  make-install-args: >-
+    DESTDIR="%{install-root}"
+    MANDIR="%{datadir}/man"
+    BINDIR="%{bindir}"
+    LIBDIR="%{libdir}/bup"
