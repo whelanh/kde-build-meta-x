@@ -20,8 +20,6 @@ depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:
-  # Tarball has configure.ac but no generated configure.
-  # autoreconf needs gtkdocize (stub it) and newer automake requires EXTRA_DIST = before +=.
   autogen: |
     mkdir -p m4 _bin
     printf 'AC_DEFUN([GTK_DOC_CHECK],[AM_CONDITIONAL([ENABLE_GTK_DOC],[false])])\n' > m4/gtk-doc.m4
@@ -29,9 +27,11 @@ variables:
     printf '#!/bin/sh\ntouch gtk-doc.make\n' > _bin/gtkdocize
     chmod +x _bin/gtkdocize
     # Fix EXTRA_DIST += without prior = in docs Makefile.am (newer automake rejects this)
-    sed -i '0,/^EXTRA_DIST +=/s/^EXTRA_DIST +=/EXTRA_DIST =/' \
-      docs/libdbusmenu-glib/reference/Makefile.am \
-      docs/libdbusmenu-gtk/reference/Makefile.am
+    for f in docs/libdbusmenu-glib/reference/Makefile.am docs/libdbusmenu-gtk/reference/Makefile.am; do
+      sed -i '0,/^EXTRA_DIST +=/s/^EXTRA_DIST +=/EXTRA_DIST =/' "$f"
+    done
+    # Fix HAVE_VALGRIND AM_CONDITIONAL — old macro doesn't set shell variable properly
+    sed -i 's/AM_CONDITIONAL(\[HAVE_VALGRIND\], \[test "x\$HAVE_VALGRIND" = "x1"\])/AM_CONDITIONAL([HAVE_VALGRIND], [false])/' configure.ac
     PATH="$(pwd)/_bin:$PATH" autoreconf -ivf .
   conf-local: >-
     --enable-gtk=3
