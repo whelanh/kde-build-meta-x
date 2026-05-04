@@ -15,9 +15,14 @@ variables:
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 - gnomeos-deps/libplist.bst
+- gnomeos-deps/libusbmuxd.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - gnomeos-deps/libplist.bst
+- gnomeos-deps/libusbmuxd.bst
 - freedesktop-sdk.bst:components/openssl.bst
 - freedesktop-sdk.bst:components/libusb.bst
+
+environment:
+  PKG_CONFIG_PATH: /usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig

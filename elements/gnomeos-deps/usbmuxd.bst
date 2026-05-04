@@ -15,12 +15,17 @@ variables:
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 - gnomeos-deps/libplist.bst
+- gnomeos-deps/libusbmuxd.bst
 - gnomeos-deps/libimobiledevice.bst
 - freedesktop-sdk.bst:components/libusb.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - gnomeos-deps/libplist.bst
+- gnomeos-deps/libusbmuxd.bst
 - gnomeos-deps/libimobiledevice.bst
 - freedesktop-sdk.bst:components/libusb.bst
 - freedesktop-sdk.bst:components/systemd.bst
+
+environment:
+  PKG_CONFIG_PATH: /usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
