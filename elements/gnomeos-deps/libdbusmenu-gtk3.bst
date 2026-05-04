@@ -23,15 +23,17 @@ variables:
   autogen: |
     mkdir -p m4 _bin
     printf 'AC_DEFUN([GTK_DOC_CHECK],[AM_CONDITIONAL([ENABLE_GTK_DOC],[false])])\n' > m4/gtk-doc.m4
-    # gtkdocize stub (creates required gtk-doc.make placeholder)
+    # gtkdocize stub
     printf '#!/bin/sh\ntouch gtk-doc.make\n' > _bin/gtkdocize
     chmod +x _bin/gtkdocize
     # Fix EXTRA_DIST += without prior = in docs Makefile.am (newer automake rejects this)
     for f in docs/libdbusmenu-glib/reference/Makefile.am docs/libdbusmenu-gtk/reference/Makefile.am; do
       sed -i '0,/^EXTRA_DIST +=/s/^EXTRA_DIST +=/EXTRA_DIST =/' "$f"
     done
-    # Fix HAVE_VALGRIND AM_CONDITIONAL — old macro doesn't set shell variable properly
-    sed -i 's/AM_CONDITIONAL(\[HAVE_VALGRIND\], \[test "x\$HAVE_VALGRIND" = "x1"\])/AM_CONDITIONAL([HAVE_VALGRIND], [false])/' configure.ac
+    # HAVE_VALGRIND AM_CONDITIONAL is inside --enable-tests block; when --disable-tests
+    # is used it's never invoked and automake fails. Remove it and add unconditionally.
+    sed -i '/AM_CONDITIONAL(\[HAVE_VALGRIND\]/d' configure.ac
+    echo 'AM_CONDITIONAL([HAVE_VALGRIND], [false])' >> configure.ac
     PATH="$(pwd)/_bin:$PATH" autoreconf -ivf .
   conf-local: >-
     --enable-gtk=3
