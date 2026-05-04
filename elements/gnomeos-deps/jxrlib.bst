@@ -10,8 +10,11 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 
 config:
+  configure-commands:
+  - sed -i 's/CFLAGS=-I\./CFLAGS=-I. -Wno-incompatible-pointer-types/' Makefile
+
   build-commands:
-  - make SHARED=1 DIR_BUILD=./build CFLAGS="-O2 -Wno-incompatible-pointer-types"
+  - make SHARED=1 DIR_BUILD=./build
 
   install-commands:
   - make install SHARED=1 DIR_BUILD=./build DIR_INSTALL='%{install-root}%{prefix}'

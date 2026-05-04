@@ -15,6 +15,7 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/go.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
+- freedesktop-sdk.bst:components/gzip.bst
 
 depends:
 - freedesktop-sdk.bst:components/avahi-libs.bst
