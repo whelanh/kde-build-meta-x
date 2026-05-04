@@ -20,4 +20,3 @@ build-depends:
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/parted.bst
-  conf-local: --disable-static
