@@ -7,6 +7,11 @@ sources:
   track: "2.7.0"
   ref: cf5897a71ea412ea2aeb1e2f6b5ea74d4fabfd8c
 
+variables:
+  autogen: |
+    echo "2.7.0" > .tarball-version
+    autoreconf -ivf
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 

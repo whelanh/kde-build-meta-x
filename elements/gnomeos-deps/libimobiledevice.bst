@@ -7,6 +7,11 @@ sources:
   track: "1.4.0"
   ref: 149f7623c672c1fa73122c7119a12bfc0012f2ac
 
+variables:
+  autogen: |
+    echo "1.4.0" > .tarball-version
+    autoreconf -ivf
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 - gnomeos-deps/libplist.bst

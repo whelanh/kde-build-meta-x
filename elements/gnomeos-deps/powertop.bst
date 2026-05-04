@@ -7,6 +7,11 @@ sources:
   track: v2.15
   ref: d51ad395436d4d1dcc3ca46e1519ffeb475bf651
 
+variables:
+  autogen: |
+    echo "2.15" > .tarball-version
+    autoreconf -ivf
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 

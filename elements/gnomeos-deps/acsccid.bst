@@ -7,6 +7,11 @@ sources:
   track: v1.1.13
   ref: ac96e83057072ba1af30a6b40e62919f5095f9d4
 
+variables:
+  autogen: |
+    echo "1.1.13" > .tarball-version
+    autoreconf -ivf
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 - freedesktop-sdk.bst:components/libusb.bst

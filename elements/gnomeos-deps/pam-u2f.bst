@@ -7,6 +7,11 @@ sources:
   track: pam_u2f-1.4.0
   ref: 1d85db26b590c191a508d06eddc86fbff6b5009e
 
+variables:
+  autogen: |
+    echo "1.4.0" > .tarball-version
+    autoreconf -ivf
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 - freedesktop-sdk.bst:components/linux-pam.bst

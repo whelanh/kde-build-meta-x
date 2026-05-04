@@ -21,6 +21,7 @@ depends:
 
 config:
   configure-commands:
+  - touch gtk-doc.make
   - autoreconf -ivf .
   - |
     ./configure --prefix='%{prefix}' \
