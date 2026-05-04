@@ -11,6 +11,7 @@ build-depends:
 - freedesktop-sdk.bst:components/automake.bst
 - freedesktop-sdk.bst:components/autoconf.bst
 - freedesktop-sdk.bst:components/libtool.bst
+- freedesktop-sdk.bst:components/patch.bst
 
 depends:
 - gnomeos-deps/squashfuse.bst

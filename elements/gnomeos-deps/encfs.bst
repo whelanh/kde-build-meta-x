@@ -39,7 +39,10 @@ config:
     # struct utimbuf in namespace encfs {} becomes encfs::utimbuf (incomplete); fix by providing using-decl
     sed -i 's|#include <fuse.h>|#include <fuse.h>\n#include <utime.h>|' encfs/encfs.h
     sed -i 's|namespace encfs {|namespace encfs {\nusing ::utimbuf;|' encfs/encfs.h
-    # fuse_fill_dir_flags is a C enum - 0 must be explicitly cast (no implicit int-to-enum in C++)
+    # fuse_fill_dir_flags is a C enum, not a preprocessor macro — defined() is always false
+    # Replace with a proper FUSE version check so we use the 5-arg fuse3 readdir filler
+    sed -i 's/#if defined(fuse_fill_dir_flags)/#if FUSE_USE_VERSION >= 30/' encfs/encfs.cpp
+    # fuse_fill_dir_flags enum: int 0 needs explicit cast in C++
     sed -i 's/filler(buf, name\.c_str(), \&st, 0, 0)/filler(buf, name.c_str(), \&st, 0, (fuse_fill_dir_flags)0)/' \
       encfs/encfs.cpp
   - cmake -B%{build-dir} -H"%{conf-root}" -G"%{generator}" %{cmake-args} -DCMAKE_C_FLAGS="-DFUSE_USE_VERSION=31" -DCMAKE_CXX_FLAGS="-DFUSE_USE_VERSION=31"
