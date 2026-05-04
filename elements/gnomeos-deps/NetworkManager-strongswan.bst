@@ -24,3 +24,4 @@ variables:
     --without-libnm-glib
     --with-gtk4
     --with-charon=/usr/lib/strongswan/charon-nm
+  local_flags: -Wno-error=deprecated-declarations
