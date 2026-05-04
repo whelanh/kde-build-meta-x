@@ -8,6 +8,7 @@ sources:
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
+- gnomeos-deps/libopusenc.bst
 
 depends:
 - freedesktop-sdk.bst:components/opus.bst
