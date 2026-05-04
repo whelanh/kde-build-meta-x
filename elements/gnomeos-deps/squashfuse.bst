@@ -16,11 +16,9 @@ depends:
 - freedesktop-sdk.bst:components/xz.bst
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
-# fuse3.bst provides headers but no fuse3.pc; override pkg-config vars
-# so PKG_CHECK_MODULES([FUSE], [fuse3]) uses these directly
+# fuse3.bst installs fuse3.pc to arch-specific pkgconfig dir not on default search path
 environment:
-  FUSE_CFLAGS: -I/usr/include/fuse3
-  FUSE_LIBS: -lfuse3 -lpthread
+  PKG_CONFIG_PATH: /usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
 
 variables:
-  conf-local: --disable-static --with-fuse=fuse3
+  conf-local: --disable-static
