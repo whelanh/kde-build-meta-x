@@ -24,6 +24,16 @@ depends:
 - freedesktop-sdk.bst:components/lz4.bst
 - freedesktop-sdk.bst:components/e2fsprogs.bst
 
+config:
+  configure-commands:
+  - |
+    # Fix protobuf API changes: JsonOptions renamed to JsonPrintOptions, full_name() returns string_view
+    sed -i 's/google::protobuf::util::JsonOptions/google::protobuf::util::JsonPrintOptions/g' \
+      vendor/extras/libjsonpb/parse/jsonpb.cpp
+    sed -i 's/message\.GetDescriptor()->full_name()/std::string(message.GetDescriptor()->full_name())/g' \
+      vendor/extras/libjsonpb/parse/jsonpb.cpp
+  - "%{cmake}"
+
 variables:
   cmake-local: >-
     -DANDROID_TOOLS_PATCH_VENDOR=ON
