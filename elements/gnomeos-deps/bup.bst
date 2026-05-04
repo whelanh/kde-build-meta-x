@@ -10,6 +10,8 @@ sources:
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/python3.bst
+- freedesktop-sdk.bst:components/python3-setuptools.bst
+- freedesktop-sdk.bst:components/perl.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
 
 depends:
@@ -18,7 +20,9 @@ depends:
 - freedesktop-sdk.bst:components/openssl.bst
 
 variables:
+  make-args: PYTHON=python3
   make-install-args: >-
+    PYTHON=python3
     DESTDIR="%{install-root}"
     MANDIR="%{datadir}/man"
     BINDIR="%{bindir}"

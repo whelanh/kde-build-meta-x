@@ -15,3 +15,9 @@ depends:
 variables:
   conf-local: >-
     --disable-wordview
+  make-install-args: >-
+    prefix="%{install-root}%{prefix}"
+    bindir="%{install-root}%{bindir}"
+    mandir="%{install-root}%{datadir}/man"
+    sysconfdir="%{install-root}%{sysconfdir}"
+    datadir="%{install-root}%{datadir}"
