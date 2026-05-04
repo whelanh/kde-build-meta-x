@@ -11,7 +11,7 @@ sources:
 build-depends:
 - freedesktop-sdk.bst:components/go.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
-- freedesktop-sdk.bst:components/tar.bst
+- freedesktop-sdk.bst:components/python3.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
@@ -23,7 +23,7 @@ environment:
 
 config:
   configure-commands:
-  - tar xf vendor.tar.gz
+  - python3 -c "import tarfile; tarfile.open('vendor.tar.gz').extractall()"
 
   build-commands:
   - go build -mod=vendor -v -o gocryptfs ./
