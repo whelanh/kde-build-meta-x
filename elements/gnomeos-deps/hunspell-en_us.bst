@@ -14,8 +14,8 @@ variables:
 
 config:
   install-commands:
-  - install -Dm644 en_US/en_US.dic '%{install-root}%{datadir}/hunspell/en_US.dic'
-  - install -Dm644 en_US/en_US.aff '%{install-root}%{datadir}/hunspell/en_US.aff'
+  - install -Dm644 en/en_US.dic '%{install-root}%{datadir}/hunspell/en_US.dic'
+  - install -Dm644 en/en_US.aff '%{install-root}%{datadir}/hunspell/en_US.aff'
   - install -d '%{install-root}%{datadir}/myspell'
   - ln -sf ../hunspell/en_US.dic '%{install-root}%{datadir}/myspell/en_US.dic'
   - ln -sf ../hunspell/en_US.aff '%{install-root}%{datadir}/myspell/en_US.aff'
