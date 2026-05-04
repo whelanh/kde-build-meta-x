@@ -14,3 +14,4 @@ depends:
 - freedesktop-sdk.bst:components/opusfile.bst
 - freedesktop-sdk.bst:components/libogg.bst
 - freedesktop-sdk.bst:components/libflac.bst
+- gnomeos-deps/libopusenc.bst

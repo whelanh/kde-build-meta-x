@@ -181,6 +181,7 @@ depends:
 - gnomeos-deps/lrzip.bst
 
 # Audio encoding/decoding
+- gnomeos-deps/libopusenc.bst
 - gnomeos-deps/opus-tools.bst
 
 # RAW image support (Gwenview/digiKam)
