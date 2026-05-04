@@ -24,3 +24,13 @@ variables:
   cmake-local: >-
     -DBUILD_TESTING=OFF
     -DCRYFS_UPDATE_CHECKS=OFF
+
+config:
+  configure-commands:
+    (<):
+    - |
+      # versioneer needs git history; replace getversion.py with a fixed version script
+      cat > src/gitversion/getversion.py << 'EOF'
+      #!/usr/bin/env python3
+      print("1.0.3")
+      EOF

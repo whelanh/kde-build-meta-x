@@ -18,6 +18,7 @@ build-depends:
 - freedesktop-sdk.bst:components/openssl.bst
 - freedesktop-sdk.bst:components/systemd.bst
 - freedesktop-sdk.bst:components/libfido2.bst
+- freedesktop-sdk.bst:components/asciidoc.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst

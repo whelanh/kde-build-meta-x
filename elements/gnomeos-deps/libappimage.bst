@@ -13,6 +13,7 @@ build-depends:
 - freedesktop-sdk.bst:components/autoconf.bst
 - freedesktop-sdk.bst:components/libtool.bst
 - freedesktop-sdk.bst:components/patch.bst
+- freedesktop-sdk.bst:components/librsvg.bst
 
 depends:
 - gnomeos-deps/squashfuse.bst

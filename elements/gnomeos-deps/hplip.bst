@@ -48,6 +48,21 @@ environment:
   CFLAGS: -g -O2 -Wno-implicit-function-declaration
 
 config:
+  configure-commands:
+    (<):
+    - |
+      # Add missing forward declarations to hp_ipp.h for GCC 15 C23 compatibility.
+      # These functions are defined in protocol/hp_ipp.c but not declared in hp_ipp.h,
+      # causing implicit function declaration errors under GCC 15 (C23 default).
+      cat >> protocol/hp_ipp.h << 'EOF'
+
+      /* Forward declarations for functions defined in hp_ipp.c but missing from header */
+      void _releaseCupsInstance(void);
+      int addCupsPrinter(char *name, char *device_uri, char *location, char *ppd_file, char *model, char *info);
+      int delCupsPrinter(char *pr_name);
+      int setDefaultCupsPrinter(char *pr_name);
+      int controlCupsPrinter(char *pr_name, int op);
+      EOF
   install-commands:
     (>):
     - |
