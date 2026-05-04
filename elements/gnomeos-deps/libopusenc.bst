@@ -2,8 +2,8 @@ kind: autotools
 
 sources:
 - kind: tar
-  url: tar_https:archive.mozilla.org/pub/opus/libopusenc-0.3.tar.gz
-  ref: 55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0
+  url: tar_https:downloads.xiph.org/releases/opus/libopusenc-0.3.tar.gz
+  ref: f616d3aff9b2034547894ccb8ab56c36cf1a4acb0d922c5d7119f97bbe58642c
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
