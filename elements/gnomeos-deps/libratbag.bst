@@ -9,6 +9,7 @@ sources:
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
 - freedesktop-sdk.bst:components/python3.bst
+- freedesktop-sdk.bst:components/swig.bst
 - freedesktop-sdk.bst:components/systemd.bst
 - freedesktop-sdk.bst:components/libevdev.bst
 - freedesktop-sdk.bst:components/libusb.bst

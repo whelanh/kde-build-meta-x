@@ -9,16 +9,13 @@ variables:
 
 config:
   configure-commands:
-  - |
-    ./bootstrap.sh --prefix=/usr \
-      --with-libraries=filesystem,thread,chrono,program_options,system,date_time,atomic
+  - ./bootstrap.sh --prefix=/usr --with-libraries=filesystem,thread,chrono,program_options,system,date_time,atomic
 
   build-commands:
   - ./b2 -j%{max-jobs} variant=release link=shared threading=multi runtime-link=shared cxxstd=17
 
   install-commands:
-  - ./b2 -j%{max-jobs} variant=release link=shared threading=multi runtime-link=shared cxxstd=17 \
-      install --prefix=%{install-root}/usr
+  - ./b2 -j%{max-jobs} variant=release link=shared threading=multi runtime-link=shared cxxstd=17 install --prefix=%{install-root}/usr
 
 sources:
 - kind: tar

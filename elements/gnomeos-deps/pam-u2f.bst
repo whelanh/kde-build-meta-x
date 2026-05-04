@@ -16,6 +16,7 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 - freedesktop-sdk.bst:components/linux-pam.bst
 - freedesktop-sdk.bst:components/openssl.bst
+- freedesktop-sdk.bst:components/systemd.bst
 - freedesktop-sdk.bst:components/libfido2.bst
 
 depends:
