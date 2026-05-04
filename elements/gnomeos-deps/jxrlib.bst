@@ -11,7 +11,7 @@ build-depends:
 
 config:
   build-commands:
-  - make SHARED=1 DIR_BUILD=./build
+  - make SHARED=1 DIR_BUILD=./build CFLAGS="-O2 -Wno-incompatible-pointer-types"
 
   install-commands:
   - make install SHARED=1 DIR_BUILD=./build DIR_INSTALL='%{install-root}%{prefix}'

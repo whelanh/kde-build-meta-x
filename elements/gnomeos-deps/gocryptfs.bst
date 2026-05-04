@@ -12,6 +12,7 @@ build-depends:
 - freedesktop-sdk.bst:components/go.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
 - freedesktop-sdk.bst:components/python3.bst
+- freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst

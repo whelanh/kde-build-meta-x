@@ -28,12 +28,16 @@ depends:
 config:
   configure-commands:
   - |
-    # Fix protobuf API changes: JsonOptions renamed to JsonPrintOptions, full_name() returns string_view
+    # Fix protobuf API: JsonOptions renamed to JsonPrintOptions, full_name() returns string_view
     sed -i 's/google::protobuf::util::JsonOptions/google::protobuf::util::JsonPrintOptions/g' \
       vendor/extras/libjsonpb/parse/jsonpb.cpp
     sed -i 's/message\.GetDescriptor()->full_name()/std::string(message.GetDescriptor()->full_name())/g' \
       vendor/extras/libjsonpb/parse/jsonpb.cpp
-  - "%{cmake}"
+    # Create minimal gtest stub: zip_writer.h includes gtest_prod.h for FRIEND_TEST even in non-test builds
+    mkdir -p gtest-stub/gtest
+    printf '#pragma once\n#define FRIEND_TEST(tc, tn) friend class tc##_##tn##_Test\n' \
+      > gtest-stub/gtest/gtest_prod.h
+  - cmake -B%{build-dir} -H"%{conf-root}" -G"%{generator}" %{cmake-args} -DCMAKE_CXX_FLAGS="-I$(pwd)/gtest-stub"
 
 variables:
   cmake-local: >-
