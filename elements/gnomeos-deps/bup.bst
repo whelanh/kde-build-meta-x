@@ -2,9 +2,10 @@ kind: autotools
 description: Git-based backup tool
 
 sources:
-- kind: tar
-  url: github:bup/bup/archive/refs/tags/bup-0.24b.tar.gz
-  ref: 6bbf2a843ff94ebc83b36bbe6c6ea721945216d1091388352d1f99825a7267b7
+- kind: git_repo
+  url: github:bup/bup.git
+  track: bup-0.24b
+  ref: 92b297dcc985c3c72d39661626b8ed022e85277a
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst

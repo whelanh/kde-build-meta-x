@@ -2,9 +2,10 @@ kind: autotools
 description: PAM module for U2F/FIDO2 two-factor authentication (Yubico)
 
 sources:
-- kind: tar
-  url: github:Yubico/pam-u2f/archive/refs/tags/pam_u2f-1.4.0.tar.gz
-  ref: 243de4db11512514e6ac7fde54a0369b13e9b2423b43ceb89f108867888783a0
+- kind: git_repo
+  url: github:Yubico/pam-u2f.git
+  track: pam_u2f-1.4.0
+  ref: 1d85db26b590c191a508d06eddc86fbff6b5009e
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst

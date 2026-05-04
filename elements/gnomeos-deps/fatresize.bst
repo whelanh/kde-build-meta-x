@@ -2,9 +2,10 @@ kind: autotools
 description: FAT filesystem resize tool
 
 sources:
-- kind: tar
-  url: github:ya-mouse/fatresize/archive/refs/tags/v1.1.0.tar.gz
-  ref: 9232bc354b6c49a9e695e071bfd2d62ec79cdf4bc84928fcf1967fa39b75c33e
+- kind: git_repo
+  url: github:ya-mouse/fatresize.git
+  track: v1.1.0
+  ref: 316981e43b14f42a9aa7b461c97e1f61f6f2390b
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst

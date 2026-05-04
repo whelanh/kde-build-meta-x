@@ -3,8 +3,8 @@ description: Library for serialization of property lists (libimobiledevice depen
 
 sources:
 - kind: tar
-  url: github:libimobiledevice/libplist/archive/refs/tags/2.7.0.tar.gz
-  ref: 66fa17a29270cb25ceaf189430ea38037c066652c2989b58d7ef6120b1a208d3
+  url: github_files:libimobiledevice/libplist/releases/download/2.7.0/libplist-2.7.0.tar.bz2
+  ref: 7ac42301e896b1ebe3c654634780c82baa7cb70df8554e683ff89f7c2643eb8b
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
