@@ -10,6 +10,7 @@ sources:
 variables:
   autogen: |
     echo "1.1.0" > .tarball-version
+    sed -i '/AC_SYS_LARGEFILE/d' configure.ac
     autoreconf -ivf
   conf-local: --disable-static
 
