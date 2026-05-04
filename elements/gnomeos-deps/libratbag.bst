@@ -27,5 +27,5 @@ depends:
 
 variables:
   meson-local: >-
-    -Dtests=skip
+    -Dtests=false
     -Ddocumentation=false

@@ -8,6 +8,7 @@ sources:
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
+- freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 - freedesktop-sdk.bst:components/automake.bst
 - freedesktop-sdk.bst:components/autoconf.bst
 - freedesktop-sdk.bst:components/libtool.bst
