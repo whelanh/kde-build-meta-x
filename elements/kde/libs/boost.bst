@@ -6,7 +6,6 @@ build-depends:
 
 variables:
   strip-binaries: ''
-  max-jobs: '%{max-jobs}'
 
 config:
   configure-commands:
