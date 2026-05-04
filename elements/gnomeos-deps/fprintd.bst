@@ -8,7 +8,6 @@ sources:
 
 build-depends:
 - freedesktop-sdk.bst:components/patch.bst
-- freedesktop-sdk.bst:components/perl.bst # for man pages
 - freedesktop-sdk.bst:components/pycairo.bst
 - freedesktop-sdk.bst:components/python3-dbus.bst
 - freedesktop-sdk.bst:components/systemd.bst

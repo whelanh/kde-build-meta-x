@@ -14,5 +14,4 @@ depends:
 - freedesktop-sdk.bst:components/libnl.bst
 - freedesktop-sdk.bst:components/libcap.bst
 - freedesktop-sdk.bst:components/pciutils.bst
-- freedesktop-sdk.bst:components/ncurses.bst
 - freedesktop-sdk.bst:components/systemd.bst
