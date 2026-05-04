@@ -11,5 +11,6 @@ build-depends:
 
 depends:
 - freedesktop-sdk.bst:components/opus.bst
+- freedesktop-sdk.bst:components/opusfile.bst
 - freedesktop-sdk.bst:components/libogg.bst
 - freedesktop-sdk.bst:components/libflac.bst
