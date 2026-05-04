@@ -237,7 +237,6 @@ depends:
 # Archive format support (Ark)
 - gnomeos-deps/lzop.bst
 - gnomeos-deps/lrzip.bst
-- gnomeos-deps/arj.bst
 - gnomeos-deps/unrar.bst
 
 # Document conversion

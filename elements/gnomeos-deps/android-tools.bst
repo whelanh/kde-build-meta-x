@@ -3,8 +3,8 @@ description: ADB and fastboot Android platform tools (nmeum community fork)
 
 sources:
 - kind: tar
-  url: github:nmeum/android-tools/archive/refs/tags/35.0.2.tar.gz
-  ref: 048bd42b75166fa4b66989b25ba1abb2b773aa7b7d012d52d84010b127db8801
+  url: github_files:nmeum/android-tools/releases/download/35.0.2/android-tools-35.0.2.tar.xz
+  ref: d2c3222280315f36d8bfa5c02d7632b47e365bfe2e77e99a3564fb6576f04097
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
