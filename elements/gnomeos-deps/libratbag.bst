@@ -13,6 +13,7 @@ build-depends:
 - freedesktop-sdk.bst:components/libevdev.bst
 - freedesktop-sdk.bst:components/libusb.bst
 - freedesktop-sdk.bst:components/json-c.bst
+- freedesktop-sdk.bst:components/json-glib.bst
 - freedesktop-sdk.bst:components/libgudev.bst
 - freedesktop-sdk.bst:components/dbus-base.bst
 
@@ -22,6 +23,7 @@ depends:
 - freedesktop-sdk.bst:components/libevdev.bst
 - freedesktop-sdk.bst:components/libusb.bst
 - freedesktop-sdk.bst:components/json-c.bst
+- freedesktop-sdk.bst:components/json-glib.bst
 - freedesktop-sdk.bst:components/libgudev.bst
 - freedesktop-sdk.bst:components/dbus-base.bst
 

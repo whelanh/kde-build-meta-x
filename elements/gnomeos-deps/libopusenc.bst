@@ -15,7 +15,8 @@ depends:
 config:
   configure-commands:
   - |
-    # GitHub tarball lacks package_version file; AC_INIT version detection falls back to empty
-    # Pre-create it so configure picks up the correct version for the .pc file
+    # GitHub tarball lacks package_version file and configure script
+    # Pre-create package_version so AC_INIT picks up the correct version for the .pc file
     echo 'PACKAGE_VERSION=0.3' > package_version
+    autoreconf -ivf
   - "%{configure}"
