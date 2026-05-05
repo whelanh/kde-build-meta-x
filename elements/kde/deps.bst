@@ -236,7 +236,7 @@ depends:
 - gnomeos-deps/xdg-desktop-portal-gtk.bst
 
 # Archive format support (Ark)
-- gnomeos-deps/arj.bst
+# arj disabled: needs 9 Arch security patches + custom build system, low priority
 - gnomeos-deps/lzop.bst
 - gnomeos-deps/lrzip.bst
 - gnomeos-deps/unrar.bst
