@@ -234,6 +234,7 @@ depends:
 - gnomeos-deps/xdg-desktop-portal-gtk.bst
 
 # Archive format support (Ark)
+- gnomeos-deps/arj.bst
 - gnomeos-deps/lzop.bst
 - gnomeos-deps/lrzip.bst
 - gnomeos-deps/unrar.bst
