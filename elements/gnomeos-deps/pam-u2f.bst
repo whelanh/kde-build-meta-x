@@ -24,3 +24,13 @@ depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 - freedesktop-sdk.bst:components/linux-pam.bst
 - freedesktop-sdk.bst:components/libfido2.bst
+
+config:
+  install-commands:
+    (>):
+    - |
+      # usrmerge: /lib → /usr/lib (autotools installs PAM module to /lib/<arch>/security)
+      if [ -d "%{install-root}/lib" ] && [ ! -L "%{install-root}/lib" ]; then
+        cp -a "%{install-root}/lib/." "%{install-root}/usr/lib/"
+        rm -rf "%{install-root}/lib"
+      fi

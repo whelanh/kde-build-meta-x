@@ -9,6 +9,7 @@ sources:
 build-depends:
 - freedesktop-sdk.bst:components/gcc.bst
 - freedesktop-sdk.bst:components/binutils.bst
+- freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst

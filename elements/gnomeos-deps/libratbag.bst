@@ -16,7 +16,7 @@ build-depends:
 - freedesktop-sdk.bst:components/json-c.bst
 - freedesktop-sdk.bst:components/json-glib.bst
 - freedesktop-sdk.bst:components/libgudev.bst
-- freedesktop-sdk.bst:components/dbus-base.bst
+- freedesktop-sdk.bst:components/dbus.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
@@ -26,7 +26,7 @@ depends:
 - freedesktop-sdk.bst:components/json-c.bst
 - freedesktop-sdk.bst:components/json-glib.bst
 - freedesktop-sdk.bst:components/libgudev.bst
-- freedesktop-sdk.bst:components/dbus-base.bst
+- freedesktop-sdk.bst:components/dbus.bst
 
 variables:
   meson-local: >-

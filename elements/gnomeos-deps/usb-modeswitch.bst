@@ -29,7 +29,11 @@ config:
   build-commands:
   - make -C usb-modeswitch
   install-commands:
-  - make -C usb-modeswitch install DESTDIR='%{install-root}' PREFIX=/usr
-  - install -Dm644 data/40-usb_modeswitch.rules -t '%{install-root}$(pkg-config udev --variable udevdir)/rules.d/'
+  - install -Dm755 usb-modeswitch/usb_modeswitch '%{install-root}/usr/bin/usb_modeswitch'
+  - install -Dm755 usb-modeswitch/usb_modeswitch_dispatcher.tcl '%{install-root}/usr/bin/usb_modeswitch_dispatcher'
+  - install -Dm644 usb-modeswitch/usb_modeswitch.conf '%{install-root}/etc/usb_modeswitch.conf'
+  - |
+    udevdir=$(pkg-config udev --variable udevdir)
+    install -Dm644 data/40-usb_modeswitch.rules -t "%{install-root}${udevdir}/rules.d/"
   - install -dm755 '%{install-root}/usr/share/usb_modeswitch'
   - cp -r data/usb_modeswitch.d/. '%{install-root}/usr/share/usb_modeswitch/'

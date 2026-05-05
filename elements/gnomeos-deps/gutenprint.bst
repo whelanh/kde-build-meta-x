@@ -23,3 +23,14 @@ variables:
     --without-gimp2
     --enable-cups-ppds
     --enable-translated-ppds
+
+config:
+  install-commands:
+    (>):
+    - |
+      # cups/src Makefile hardcodes SBINDIR=/usr/sbin despite --sbindir configure flag
+      if [ -d "%{install-root}/usr/sbin" ]; then
+        find "%{install-root}/usr/sbin" -maxdepth 1 -not -type d \
+          -exec mv {} "%{install-root}/usr/bin/" \;
+        rmdir "%{install-root}/usr/sbin"
+      fi

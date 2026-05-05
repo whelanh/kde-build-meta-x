@@ -18,5 +18,5 @@ variables:
 
 config:
   install-commands:
-  - install -Dm644 60-steam-input.rules -t '%{install-root}$(pkg-config udev --variable udevdir)/rules.d/'
-  - install -Dm644 60-steam-vr.rules -t '%{install-root}$(pkg-config udev --variable udevdir)/rules.d/'
+  - install -Dm644 60-steam-input.rules -t %{install-root}$(pkg-config udev --variable udevdir)/rules.d
+  - install -Dm644 60-steam-vr.rules -t %{install-root}$(pkg-config udev --variable udevdir)/rules.d

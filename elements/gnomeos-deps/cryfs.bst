@@ -9,13 +9,15 @@ sources:
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
+- freedesktop-sdk.bst:components/python3.bst
+- gnomeos-deps/fuse2.bst
 - kde/libs/boost.bst
 - gnomeos-deps/spdlog.bst
 - gnomeos-deps/range-v3.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
-- freedesktop-sdk.bst:components/fuse3.bst
+- gnomeos-deps/fuse2.bst
 - freedesktop-sdk.bst:components/openssl.bst
 - freedesktop-sdk.bst:components/curl.bst
 - kde/libs/boost.bst

@@ -151,7 +151,6 @@ depends:
 - gnomeos-deps/cups-browsed.bst
 - gnomeos-deps/ipp-usb.bst
 - gnomeos-deps/gutenprint.bst
-- gnomeos-deps/foomatic-db.bst
 - gnomeos-deps/hplip.bst
 
 # VM support

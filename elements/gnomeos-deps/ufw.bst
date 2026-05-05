@@ -8,6 +8,8 @@ sources:
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-python-setuptools.bst
+- freedesktop-sdk.bst:components/sed.bst
+- freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
 
 depends:
 - freedesktop-sdk.bst:components/python3.bst
@@ -25,3 +27,14 @@ config:
   - install -Dm644 conf/after.rules %{install-root}%{sysconfdir}/ufw/after.rules
   - install -Dm644 conf/before6.rules %{install-root}%{sysconfdir}/ufw/before6.rules
   - install -Dm644 conf/after6.rules %{install-root}%{sysconfdir}/ufw/after6.rules
+  - |
+    # setup.py hardcodes /usr/sbin and /lib; move for usrmerge
+    if [ -d "%{install-root}/usr/sbin" ]; then
+      find "%{install-root}/usr/sbin" -maxdepth 1 -not -type d \
+        -exec mv {} "%{install-root}/usr/bin/" \;
+      rmdir "%{install-root}/usr/sbin"
+    fi
+    if [ -d "%{install-root}/lib" ] && [ ! -L "%{install-root}/lib" ]; then
+      cp -a "%{install-root}/lib/." "%{install-root}/usr/lib/"
+      rm -rf "%{install-root}/lib"
+    fi

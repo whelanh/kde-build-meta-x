@@ -11,15 +11,18 @@ depends:
 - freedesktop-sdk.bst:components/libbpf.bst
 - freedesktop-sdk.bst:components/systemd.bst
 
+build-depends:
+- freedesktop-sdk.bst:components/findutils.bst
+
 variables:
   strip-binaries: ''
 
 config:
   install-commands:
-  - install -Dm755 bin/udev-hid-bpf '%{install-root}/usr/bin/udev-hid-bpf'
-  - find lib/firmware -type d -exec install -dm755 '%{install-root}/usr/{}' \;
-  - find lib/firmware -type f -exec install -Dm644 '{}' '%{install-root}/usr/{}' \;
-  - install -Dm644 lib/udev/rules.d/81-hid-bpf.rules -t '%{install-root}/usr/lib/udev/rules.d/'
-  - install -Dm644 lib/udev/hwdb.d/81-hid-bpf-stable.hwdb -t '%{install-root}/usr/lib/udev/hwdb.d/'
-  - install -Dm644 lib/udev/hwdb.d/81-hid-bpf-testing.hwdb -t '%{install-root}/usr/lib/udev/hwdb.d/'
-  - install -Dm644 share/man/man1/udev-hid-bpf.1 -t '%{install-root}/usr/share/man/man1/'
+  - install -Dm755 bin/udev-hid-bpf %{install-root}/usr/bin/udev-hid-bpf
+  - find lib/firmware -type d -exec install -dm755 %{install-root}/usr/{} \;
+  - find lib/firmware -type f -exec install -Dm644 {} %{install-root}/usr/{} \;
+  - install -Dm644 lib/udev/rules.d/81-hid-bpf.rules -t %{install-root}/usr/lib/udev/rules.d/
+  - install -Dm644 lib/udev/hwdb.d/81-hid-bpf-stable.hwdb -t %{install-root}/usr/lib/udev/hwdb.d/
+  - install -Dm644 lib/udev/hwdb.d/81-hid-bpf-testing.hwdb -t %{install-root}/usr/lib/udev/hwdb.d/
+  - install -Dm644 share/man/man1/udev-hid-bpf.1 -t %{install-root}/usr/share/man/man1/

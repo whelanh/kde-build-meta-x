@@ -8,6 +8,7 @@ sources:
 
 build-depends:
 - freedesktop-sdk.bst:components/patch.bst
+- freedesktop-sdk.bst:components/perl.bst
 - freedesktop-sdk.bst:components/pycairo.bst
 - freedesktop-sdk.bst:components/python3-dbus.bst
 - freedesktop-sdk.bst:components/systemd.bst
@@ -15,6 +16,7 @@ build-depends:
 - core-deps/python-dbusmock.bst
 - sdk/gtk-doc.bst
 - sdk/pygobject.bst
+- gnomeos-deps/pam-wrapper.bst
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst

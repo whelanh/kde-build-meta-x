@@ -35,3 +35,16 @@ config:
 
   install-commands:
   - make DESTDIR="%{install-root}" install
+  - |
+    # usrmerge: /sbin → /usr/bin, /lib → /usr/lib
+    if [ -d "%{install-root}/sbin" ]; then
+      mkdir -p "%{install-root}/usr/bin"
+      find "%{install-root}/sbin" -maxdepth 1 -not -type d \
+        -exec mv {} "%{install-root}/usr/bin/" \;
+      rmdir "%{install-root}/sbin"
+    fi
+    if [ -d "%{install-root}/lib" ] && [ ! -L "%{install-root}/lib" ]; then
+      mkdir -p "%{install-root}/usr/lib"
+      cp -a "%{install-root}/lib/." "%{install-root}/usr/lib/"
+      rm -rf "%{install-root}/lib"
+    fi
