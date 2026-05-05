@@ -40,3 +40,4 @@ depends:
 - kde/plasma/xdg-desktop-portal-kde.bst
 - kde/plasma/kio-admin.bst
 - kde/plasma/kinfocenter.bst
+- kde/plasma/sddm.bst
