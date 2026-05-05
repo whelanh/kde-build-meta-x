@@ -213,9 +213,10 @@ depends:
 # Network filesystems
 - kde-linux-deps/nfs-utils.bst
 
-# Power management (x86 Intel thermal daemon)
+# Power management (x86 Intel thermal daemon, tuned PPD proxy)
 - kde-linux-deps/upower.bst
 - kde-linux-deps/thermald.bst
+- kde-linux-deps/tuned-ppd.bst
 
 # CLI tools (KDE Linux parity)
 - kde-linux-deps/lsof.bst
