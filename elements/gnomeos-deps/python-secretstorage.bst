@@ -10,7 +10,7 @@ depends:
 
 config:
   build-commands:
-  - python3 -m pip wheel --no-build-isolation --no-deps --wheel-dir dist .
+  - python3 -c "from setuptools.build_meta import build_wheel; build_wheel('%{dist-dir}', dict())"
 
 sources:
 - kind: tar

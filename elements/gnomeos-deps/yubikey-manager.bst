@@ -16,7 +16,7 @@ depends:
 
 config:
   build-commands:
-  - python3 -m pip wheel --no-build-isolation --no-deps --wheel-dir dist .
+  - python3 -c "from poetry.core.masonry.api import build_wheel; build_wheel('%{dist-dir}', None)"
 
 sources:
 - kind: tar
