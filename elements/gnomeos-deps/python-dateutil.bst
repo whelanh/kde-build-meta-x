@@ -7,6 +7,10 @@ depends:
 - freedesktop-sdk.bst:components/python3.bst
 - freedesktop-sdk.bst:components/python3-six.bst
 
+config:
+  build-commands:
+  - python3 -m pip wheel --no-build-isolation --no-deps --wheel-dir dist .
+
 sources:
 - kind: tar
   url: pypi:66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz

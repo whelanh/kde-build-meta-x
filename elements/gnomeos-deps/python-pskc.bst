@@ -8,6 +8,10 @@ depends:
 - freedesktop-sdk.bst:components/python3-cryptography.bst
 - gnomeos-deps/python-dateutil.bst
 
+config:
+  build-commands:
+  - python3 -m pip wheel --no-build-isolation --no-deps --wheel-dir dist .
+
 sources:
 - kind: tar
   url: pypi:bb/96/877a597fc0bd9a3ed33ada8b30a93f9705805dc43a330e048a8bb1078365/python_pskc-1.4.tar.gz

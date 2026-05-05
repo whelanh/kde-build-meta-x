@@ -7,6 +7,10 @@ depends:
 - freedesktop-sdk.bst:components/python3.bst
 - gnomeos-deps/more-itertools.bst
 
+config:
+  build-commands:
+  - python3 -m pip wheel --no-build-isolation --no-deps --wheel-dir dist .
+
 sources:
 - kind: tar
   url: pypi:06/c0/ed4a27bc5571b99e3cff68f8a9fa5b56ff7df1c2251cc715a652ddd26402/jaraco.classes-3.4.0.tar.gz

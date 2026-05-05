@@ -8,6 +8,10 @@ depends:
 - freedesktop-sdk.bst:components/python3-cryptography.bst
 - gnomeos-deps/python-jeepney.bst
 
+config:
+  build-commands:
+  - python3 -m pip wheel --no-build-isolation --no-deps --wheel-dir dist .
+
 sources:
 - kind: tar
   url: pypi:1c/03/e834bcd866f2f8a49a85eaff47340affa3bfa391ee9912a952a1faa68c7b/secretstorage-3.5.0.tar.gz

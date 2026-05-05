@@ -12,6 +12,10 @@ depends:
 - gnomeos-deps/python-jaraco-functools.bst
 - gnomeos-deps/python-secretstorage.bst
 
+config:
+  build-commands:
+  - python3 -m pip wheel --no-build-isolation --no-deps --wheel-dir dist .
+
 sources:
 - kind: tar
   url: pypi:43/4b/674af6ef2f97d56f0ab5153bf0bfa28ccb6c3ed4d1babf4305449668807b/keyring-25.7.0.tar.gz

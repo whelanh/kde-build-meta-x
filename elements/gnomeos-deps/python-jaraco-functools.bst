@@ -8,6 +8,10 @@ depends:
 - gnomeos-deps/more-itertools.bst
 - gnomeos-deps/python-jaraco-context.bst
 
+config:
+  build-commands:
+  - python3 -m pip wheel --no-build-isolation --no-deps --wheel-dir dist .
+
 sources:
 - kind: tar
   url: pypi:0f/27/056e0638a86749374d6f57d0b0db39f29509cce9313cf91bdc0ac4d91084/jaraco_functools-4.4.0.tar.gz
