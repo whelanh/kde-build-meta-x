@@ -25,6 +25,7 @@ depends:
 - freedesktop-sdk.bst:components/usbutils.bst
 - freedesktop-sdk.bst:components/hosts.bst
 - freedesktop-sdk.bst:components/flatpak.bst
+- freedesktop-sdk.bst:components/nsswitch-config-bootable.bst
 
 # KDE Plasma Desktop
 - kde/org.kde.plasma.desktop.bst
