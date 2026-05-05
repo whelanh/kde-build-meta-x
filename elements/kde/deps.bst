@@ -44,6 +44,7 @@ depends:
 # Audio
 - freedesktop-sdk.bst:components/pipewire-daemon.bst
 - freedesktop-sdk.bst:components/wireplumber.bst
+- gnomeos-deps/pipewire-jack.bst
 
 # Network — provided by core-deps/NetworkManager.bst via plasma-nm/networkmanager-qt transitive deps
 # (using freedesktop-sdk version here would cause a duplicate-file overlap)
@@ -129,6 +130,7 @@ depends:
 - gnomeos-deps/libratbag.bst
 - gnomeos-deps/steam-devices.bst
 - gnomeos-deps/pam-u2f.bst
+- gnomeos-deps/yubikey-manager.bst
 - gnomeos-deps/acsccid.bst
 - gnomeos-deps/usb-modeswitch.bst
 - gnomeos-deps/usbmuxd.bst
@@ -295,6 +297,9 @@ depends:
 # AppImage support
 - gnomeos-deps/squashfuse.bst
 - gnomeos-deps/libappimage.bst
+
+# KDE developer tools
+- kde/apps/gammaray.bst
 
 (?):
 - arch == "aarch64":
