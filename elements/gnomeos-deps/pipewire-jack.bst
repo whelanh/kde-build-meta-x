@@ -10,3 +10,8 @@ config:
   include:
   - jack
   include-orphans: False
+
+public:
+  bst:
+    overlap-whitelist:
+    - '/**'
