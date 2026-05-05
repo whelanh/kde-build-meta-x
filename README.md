@@ -1,72 +1,87 @@
 # KDE Build Metadata
 
-KDE Build Metadata is a collection of BuildStream elements for building KDE Plasma 6 and related packages.
-It follows the same architecture as GNOME's `gnome-build-meta`, adapted for KDE.
+KDE Build Metadata is a [BuildStream](https://docs.buildstream.build/) project for building the
+KDE Plasma 6 desktop stack. It follows the same architecture as GNOME's
+[gnome-build-meta](https://gitlab.gnome.org/GNOME/gnome-build-meta), adapted for KDE.
 
-## Overview
+This repo produces a **KDE Linux OCI image** — a non-customized desktop closely replicating the
+upstream [KDE Linux MKOSI build](https://invent.kde.org/kde-linux/kde-linux). Downstream
+distribution projects (like [hanthor/tromso](https://github.com/hanthor/tromso) for Aurora)
+junction into this repo and layer their customizations on top.
 
-This repository contains `.bst` element definitions for:
+## Package Coverage
 
 | Category | Elements | Description |
 |----------|----------|-------------|
-| **Qt6** | 29 | Qt 6 base, declarative, and related modules |
-| **Frameworks** | 69 | KDE Frameworks 6 (kcoreaddons, kio, kirigami, etc.) |
-| **Libs** | 7 | Additional KDE libraries |
-| **Plasma** | 40 | KDE Plasma 6 (plasma-workspace, kwin, sddm, etc.) |
-| **Apps** | 7 | KDE Applications (dolphin, konsole, kate, etc.) |
+| **Qt6** | 30 | Qt 6 base, declarative, multimedia, and related modules |
+| **Frameworks** | 70 | KDE Frameworks 6 (kcoreaddons, kio, kirigami, etc.) |
+| **Libs** | 17 | Additional KDE libraries (libkomparediff2, okteta, etc.) |
+| **Plasma** | 41 | KDE Plasma 6 (plasma-workspace, kwin, sddm, etc.) |
+| **Apps** | 9 | KDE Applications (dolphin, konsole, kate, okular, etc.) |
+| **System deps** | ~30 | OS-level packages (bootc, NetworkManager, zram, etc.) |
 
 ## Architecture
 
 ```
-hanthor/kde-build-meta
+hanthor/kde-build-meta              ← this repo
 ├── elements/
-│   ├── kde/
-│   │   ├── qt6/           # Qt6 modules
-│   │   ├── frameworks/    # KDE Frameworks 6
-│   │   ├── libs/          # Additional KDE libraries
-│   │   ├── plasma/        # Plasma 6 components
-│   │   ├── apps/          # KDE Applications
-│   │   ├── deps.bst       # Master KDE deps stack
-│   │   ├── org.kde.Sdk.bst
-│   │   ├── org.kde.apps.bst
-│   │   └── org.kde.plasma.desktop.bst
-│   └── freedesktop-sdk.bst  # Junction → freedesktop-sdk
-├── project.conf           # Project configuration
-├── include/               # Shared includes (aliases.yml)
-└── patches/               # Upstream patches
+│   ├── kde/                        # KDE packages (Qt6, Frameworks, Plasma, Apps)
+│   ├── gnomeos-deps/               # OS runtime deps (bootc, zram, sddm configs, etc.)
+│   ├── components/                 # freedesktop-sdk overrides
+│   ├── oci/kde-linux/              # KDE Linux OCI image build targets
+│   │   ├── stack.bst               # Full OS composition stack
+│   │   ├── image.bst               # OCI image builder
+│   │   └── filesystem.bst          # Filesystem composition
+│   └── freedesktop-sdk.bst         # Junction → freedesktop-sdk
+├── Justfile                        # Build commands (requires podman + just)
+├── project.conf                    # BuildStream project configuration
+├── include/                        # Shared aliases and mirrors
+└── patches/                        # Upstream patches
+
+hanthor/tromso                      ← Aurora OCI (downstream)
+├── elements/
+│   ├── aurora/                     # Aurora customizations
+│   ├── oci/aurora.bst              # Aurora OCI image
+│   └── kde-build-meta.bst          # Junction → this repo
 ```
 
-## Usage
+## Building Standalone
 
-This repository is designed to be consumed as a BuildStream junction by a top-level project.
-See [hanthor/tromso](https://github.com/hanthor/tromso) for the Aurora OCI image that uses this repo.
-
-### Local Development
-
-To build an element locally:
+Requires: [podman](https://podman.io/) and [just](https://just.systems/).
 
 ```bash
-# Open a workspace for local modifications
-bst workspace open --no-checkout kde/plasma/plasma-workspace.bst --directory ../plasma-workspace/
+# Build the KDE Linux OCI image
+just bst-build oci/kde-linux/image.bst
 
-# Build the element
-bst build kde/plasma/plasma-workspace.bst
+# Show element dependency tree
+just show oci/kde-linux/stack.bst
 
-# Get a runtime shell
-bst shell kde/plasma/plasma-workspace.bst
+# Open a build shell for an element
+just bst shell kde/plasma/plasma-workspace.bst
+
+# Tail the build log
+just log
 ```
 
-### Updating the Junction
+## Using as a Junction (for downstream projects)
 
-When updating kde-build-meta in a consuming project:
+After pushing changes to this repo, update the junction in the consuming project:
 
-1. Commit and push changes to this repo
-2. Compute the new tarball SHA256:
-   ```bash
-   SHA=$(git rev-parse --short=7 HEAD)
-   curl -sL https://github.com/hanthor/kde-build-meta/archive/${SHA}.tar.gz | sha256sum
-   ```
-3. Update the junction `.bst` file with new URL, SHA256, and base-dir
+```bash
+SHA=$(git rev-parse --short=7 HEAD)
+curl -sL https://github.com/hanthor/kde-build-meta/archive/${SHA}.tar.gz | tee /tmp/kbm.tar.gz | sha256sum
+tar tzf /tmp/kbm.tar.gz | head -1   # base-dir name
+```
+
+Then update the consuming project's `elements/kde-build-meta.bst`:
+```yaml
+kind: junction
+sources:
+- kind: tar
+  url: https://github.com/hanthor/kde-build-meta/archive/<SHA>.tar.gz
+  ref: <sha256>
+  base-dir: kde-build-meta-<full-sha>
+```
 
 ## Adding New Elements
 
