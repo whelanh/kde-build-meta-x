@@ -2,6 +2,7 @@ kind: pyproject
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-python-flit.bst
+- freedesktop-sdk.bst:components/stripper.bst
 
 depends:
 - freedesktop-sdk.bst:components/python3.bst
