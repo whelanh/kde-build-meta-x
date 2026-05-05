@@ -7,22 +7,22 @@ depends:
 - kde/deps.bst
 
 # OS-related config (reused from gnomeos, not KDE-specific)
-- gnomeos/fwupd-efi-signed-maybe.bst
-- gnomeos/import-deployment-pub-key.bst
-- gnomeos/public-keys.bst
-- gnomeos/reload-sysext.bst
+- kde-linux-system/fwupd-efi-signed-maybe.bst
+- kde-linux-system/import-deployment-pub-key.bst
+- kde-linux-system/public-keys.bst
+- kde-linux-system/reload-sysext.bst
 # replace-signed-systemd-boot.bst dropped: local stripped-down version
 # (no signing) duplicates files already provided by core-deps/systemd.bst
-- gnomeos/systemd-pcrlock-workaround.bst
+- kde-linux-system/systemd-pcrlock-workaround.bst
 
 # Add the kernel
 - freedesktop-sdk.bst:components/linux-firmware.bst
 - freedesktop-sdk.bst:bootstrap/libselinux.bst
-- gnomeos/initramfs/signed-modules.bst
+- kde-linux-system/initramfs/signed-modules.bst
 - oci/initramfs.bst
 
 # bootc for image-based updates
-- gnomeos-deps/bootc.bst
+- kde-linux-deps/bootc.bst
 
 - oci/integration/bootc-config.bst
 - freedesktop-sdk.bst:vm/config/sudo-nopasswd.bst

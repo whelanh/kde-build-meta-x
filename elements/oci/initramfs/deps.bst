@@ -13,17 +13,17 @@ depends:
 - freedesktop-sdk.bst:components/tpm2-tools.bst
 - freedesktop-sdk.bst:components/tzdata.bst
 - freedesktop-sdk.bst:components/util-linux.bst
-- gnomeos-deps/plymouth-gnome-theme.bst
-- gnomeos-deps/udev-hide-usr.bst
-- gnomeos-deps/zram-generator.bst
-- gnomeos/initramfs/signed-modules.bst
-- gnomeos/reload-sysext.bst
+- kde-linux-deps/plymouth-gnome-theme.bst
+- kde-linux-deps/udev-hide-usr.bst
+- kde-linux-deps/zram-generator.bst
+- kde-linux-system/initramfs/signed-modules.bst
+- kde-linux-system/reload-sysext.bst
 - oci/integration/os-release.bst
-- gnomeos-deps/bootc.bst
+- kde-linux-deps/bootc.bst
 - oci/integration/lvm2-enable-activation.bst
 
 (?):
 - arch in ["x86_64"]:
     depends:
       (>):
-      - gnomeos-deps/intel-ucode.bst
+      - kde-linux-deps/intel-ucode.bst

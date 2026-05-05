@@ -4,11 +4,11 @@ build-depends:
 - freedesktop-sdk.bst:components/fakecap.bst
 - freedesktop-sdk.bst:components/oci-builder.bst
 - freedesktop-sdk.bst:vm/prepare-image.bst
-- oci/gnomeos/init-scripts.bst
+- oci/kde-linux-system/init-scripts.bst
 - filename: oci/platform/image.bst
   config:
     location: /parent
-- filename: oci/gnomeos/filesystem.bst
+- filename: oci/kde-linux-system/filesystem.bst
   config:
     location: /layer
 

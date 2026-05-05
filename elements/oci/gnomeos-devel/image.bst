@@ -5,7 +5,7 @@ build-depends:
 - freedesktop-sdk.bst:components/oci-builder.bst
 - freedesktop-sdk.bst:vm/prepare-image.bst
 - oci/gnomeos-devel/init-scripts.bst
-- filename: oci/gnomeos/image.bst
+- filename: oci/kde-linux-system/image.bst
   config:
     location: /parent
 - filename: oci/gnomeos-devel/filesystem.bst

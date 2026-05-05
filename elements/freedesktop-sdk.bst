@@ -55,10 +55,10 @@ config:
     # not the Flatpak runtime, as its easy to bundle when needed.
     components/zenity.bst: void/zenity.bst
 
-    components/linux-module-cert.bst: gnomeos/linux-module-cert.bst
+    components/linux-module-cert.bst: kde-linux-system/linux-module-cert.bst
     components/systemd-base.bst: core-deps/systemd-base.bst
     components/systemd.bst: core-deps/systemd.bst
     components/systemd-ukify.bst: core-deps/systemd-ukify.bst
     components/systemd-libs.bst: core-deps/systemd-libs.bst
 
-    components/geoclue-base.bst: gnomeos-deps/geoclue-base.bst
+    components/geoclue-base.bst: kde-linux-deps/geoclue-base.bst

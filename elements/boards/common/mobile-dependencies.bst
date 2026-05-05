@@ -2,8 +2,8 @@ kind: stack
 description: generic common zone for dependencies related to the PinePhone Pro & PinePhone.
 
 depends:
-- gnomeos-deps/deps.bst
-- gnomeos/os-release.bst
+- kde-linux-deps/deps.bst
+- kde-linux-system/os-release.bst
 
 - core/meta-gnome-core-mobile.bst
 

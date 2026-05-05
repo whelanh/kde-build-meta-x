@@ -1,7 +1,7 @@
 kind: script
 
 build-depends:
-- gnomeos/generate-initramfs.bst
+- kde-linux-system/generate-initramfs.bst
 - oci/initramfs/deps.bst
 - oci/initramfs/initial-scripts.bst
 - freedesktop-sdk.bst:components/fakecap.bst

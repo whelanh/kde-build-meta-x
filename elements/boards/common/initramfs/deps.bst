@@ -10,7 +10,7 @@ depends:
 - freedesktop-sdk.bst:components/shadow.bst
 - freedesktop-sdk.bst:components/tzdata.bst
 - freedesktop-sdk.bst:components/pkg-config.bst
-- gnomeos-deps/plymouth-gnome-theme.bst
+- kde-linux-deps/plymouth-gnome-theme.bst
 - freedesktop-sdk.bst:components/linux-firmware.bst
 - freedesktop-sdk.bst:components/wireless-regdb-bin.bst
 - freedesktop-sdk.bst:components/ostree.bst

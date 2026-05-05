@@ -1,8 +1,8 @@
 kind: compose
 
 build-depends:
-- oci/gnomeos/stack.bst
-- oci/gnomeos/manifest.bst
+- oci/kde-linux-system/stack.bst
+- oci/kde-linux-system/manifest.bst
 
 config:
   exclude:
