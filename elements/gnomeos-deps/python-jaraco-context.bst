@@ -8,7 +8,7 @@ depends:
 
 config:
   build-commands:
-  - pip wheel --no-build-isolation --no-deps --wheel-dir dist .
+  - python3 -m pip wheel --no-build-isolation --no-deps --wheel-dir dist .
 
 sources:
 - kind: tar
