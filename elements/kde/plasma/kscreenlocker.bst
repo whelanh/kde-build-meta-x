@@ -36,15 +36,13 @@ build-depends:
 - kde/frameworks/karchive.bst
 - kde/plasma/plasma-activities.bst
 - kde/frameworks/breeze-icons.bst
+- freedesktop-sdk.bst:components/docbook-xml.bst
+- freedesktop-sdk.bst:components/docbook-xsl.bst
+- freedesktop-sdk.bst:components/libxslt.bst
 
 variables:
   cmake-local: >-
-    -DCMAKE_DISABLE_FIND_PACKAGE_KF6DocTools=ON
     -DBUILD_TESTING=OFF
-    -DBUILD_HTML_DOCS=OFF
-    -DBUILD_MAN_DOCS=OFF
-    -DBUILD_QTHELP_DOCS=OFF
-    -DBUILD_DOC=OFF
     -DBUILD_PYTHON_BINDINGS=OFF
     -DKF_SKIP_PO_PROCESSING=ON
     -DBUILD_QT5=OFF
