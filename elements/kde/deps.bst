@@ -136,6 +136,19 @@ depends:
 - kde-linux-deps/usb-modeswitch.bst
 - kde-linux-deps/usbmuxd.bst
 - kde-linux-deps/udev-hid-bpf.bst
+# Intel GPU media/video acceleration
+- kde-linux-deps/libvpl.bst
+- kde-linux-deps/vpl-gpu-rt.bst
+# YubiKey full-disk encryption support
+- kde-linux-deps/yubico-c.bst
+- kde-linux-deps/yubico-c-client.bst
+- kde-linux-deps/yubikey-personalization.bst
+- kde-linux-deps/yubikey-full-disk-encryption.bst
+# OpenRazer daemon (userspace; no DKMS kernel modules)
+- kde-linux-deps/python-daemonize.bst
+- kde-linux-deps/python-pyudev.bst
+- kde-linux-deps/python-setproctitle.bst
+- kde-linux-deps/openrazer-daemon.bst
 
 # Filesystem support
 # ntfs-3g omitted: modern kernels have ntfs3 built-in (5.15+)
