@@ -3,7 +3,7 @@ description: YubiKey Personalization Tool (ykpers) - configure and manage YubiKe
 
 sources:
 - kind: tar
-  url: https://developers.yubico.com/yubikey-personalization/Releases/ykpers-1.20.0.tar.gz
+  url: tar_https:developers.yubico.com/yubikey-personalization/Releases/ykpers-1.20.0.tar.gz
   ref: 0ec84d0ea862f45a7d85a1a3afe5e60b8da42df211bb7d27a50f486e31a79b93
 
 build-depends:

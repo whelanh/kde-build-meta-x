@@ -3,7 +3,7 @@ description: Intel VPL GPU Runtime (oneVPL-intel-gpu) - hardware accelerated vid
 
 sources:
 - kind: tar
-  url: github_https:intel/vpl-gpu-rt/archive/intel-onevpl-26.1.5/vpl-gpu-rt-26.1.5.tar.gz
+  url: github_files:intel/vpl-gpu-rt/archive/intel-onevpl-26.1.5/vpl-gpu-rt-26.1.5.tar.gz
   ref: d2f297dc03d4e5585bee75ce3bafc5c8a35b30ac60ff7d6b49c1ed6f6b8152a3
 
 build-depends:

@@ -3,7 +3,7 @@ description: OpenRazer daemon for Razer peripheral hardware support (userspace o
 
 sources:
 - kind: tar
-  url: github_https:openrazer/openrazer/archive/refs/tags/v3.12.2/openrazer-3.12.2.tar.gz
+  url: github_files:openrazer/openrazer/archive/refs/tags/v3.12.2/openrazer-3.12.2.tar.gz
   ref: 21f69290435a77412c31422abfa297506773982cd465a98d0d69d6f46a5030d3
 
 build-depends:
