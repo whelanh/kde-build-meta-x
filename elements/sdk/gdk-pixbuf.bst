@@ -9,6 +9,7 @@ sources:
 build-depends:
 - sdk/gi-docgen.bst
 - sdk/gobject-introspection.bst
+- sdk/libglycin.bst
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
 
 depends:
