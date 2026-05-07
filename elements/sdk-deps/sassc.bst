@@ -12,3 +12,6 @@ build-depends:
 depends:
 - sdk-deps/libsass.bst
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+
+variables:
+  conf-local: LDFLAGS="-L/usr/lib/x86_64-linux-gnu"
