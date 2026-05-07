@@ -4,7 +4,7 @@ description: Use YubiKey to unlock LUKS encrypted partitions
 sources:
 - kind: tar
   url: github_files:agherzan/yubikey-full-disk-encryption/archive/dcaac005b10eac132ac663c268318bd909bf027c.tar.gz
-  ref: 464b6ce228c01f32fd3fb6eb983fd656148e122c435205c0771ae0213d900b5b
+  ref: 5059554e72c9b34b6b3caf90252ff74aeba68ab86bfd843f8ce79d1b72b223bb
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-make.bst
