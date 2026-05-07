@@ -7,7 +7,7 @@ sources:
   ref: 0ec84d0ea862f45a7d85a1a3afe5e60b8da42df211bb7d27a50f486e31a79b93
 
 variables:
-  conf-local: "CFLAGS=\"${CFLAGS} -DTRUE=1 -DFALSE=0\""
+  conf-local: "CFLAGS=\"${CFLAGS} -DTRUE=1 -DFALSE=0 -fcommon\""
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
