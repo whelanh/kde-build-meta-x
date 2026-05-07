@@ -12,6 +12,7 @@ variables:
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
 - freedesktop-sdk.bst:components/curl.bst
+- freedesktop-sdk.bst:components/help2man.bst
 - kde-linux-deps/yubico-c.bst
 
 depends:
