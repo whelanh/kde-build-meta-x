@@ -7,6 +7,7 @@ sources:
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-autotools.bst
+- sdk-deps/libsass.bst
 
 depends:
 - sdk-deps/libsass.bst
