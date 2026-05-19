@@ -22,6 +22,8 @@ config:
     install -m0644 -t "$fontdir" fonts/NotoSans/googlefonts/ttf/*.ttf
     install -m0644 -t "$fontdir" fonts/NotoSerif/googlefonts/ttf/*.ttf
     install -m0644 -t "$fontdir" fonts/NotoSansMono/googlefonts/ttf/*.ttf
+    install -m0644 -t "$fontdir" fonts/NotoSansSymbols/googlefonts/ttf/*.ttf
+    install -m0644 -t "$fontdir" fonts/NotoSansSymbols2/googlefonts/ttf/*.ttf
 
     confdir="%{install-root}%{sysconfdir}/fonts/conf.d"
     install -d "$confdir"
