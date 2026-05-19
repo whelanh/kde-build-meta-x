@@ -10,6 +10,10 @@ build-depends:
 - kde/qt6/qt6-qttools.bst
 - freedesktop-sdk.bst:components/mesa-headers.bst
 - kde/frameworks/karchive.bst
+- freedesktop-sdk.bst:components/libjxl.bst
+
+depends:
+- freedesktop-sdk.bst:components/libjxl.bst
 
 variables:
   cmake-local: -DBUILD_TESTING=OFF -DBUILD_PYTHON_BINDINGS=OFF
