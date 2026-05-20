@@ -32,6 +32,8 @@ depends:
 - kde/plasma/spectacle.bst
 - kde/plasma/systemsettings.bst
 - kde/plasma/bluedevil.bst
+- kde/libs/pulseaudio-qt.bst
+- kde/libs/kirigami-addons.bst
 - kde/plasma/plasma-pa.bst
 - kde/plasma/kscreen.bst
 - kde/plasma/ksshaskpass.bst

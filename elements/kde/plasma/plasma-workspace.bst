@@ -84,8 +84,6 @@ build-depends:
 - kde/frameworks/kwidgetsaddons.bst
 - kde/frameworks/kservice.bst
 - kde/frameworks/kxmlgui.bst
-depends:
-- kde/libs/kirigami-addons.bst
 
 variables:
   cmake-local: >-

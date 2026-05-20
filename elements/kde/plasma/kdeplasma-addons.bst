@@ -37,9 +37,6 @@ build-depends:
 - kde/frameworks/kunitconversion.bst
 - kde/frameworks/kxmlgui.bst
 
-depends:
-- kde/libs/kirigami-addons.bst
-
 variables:
   cmake-local: >-
     -DBUILD_TESTING=OFF
