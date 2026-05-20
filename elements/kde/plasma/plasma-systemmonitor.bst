@@ -25,6 +25,10 @@ build-depends:
 - kde/frameworks/kcoreaddons.bst
 - kde/frameworks/kdeclarative.bst
 - kde/plasma/libksysguard.bst
+
+depends:
+- kde/libs/kirigami-addons.bst
+
 variables:
   cmake-local: >-
     -DBUILD_TESTING=OFF

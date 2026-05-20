@@ -42,6 +42,7 @@ build-depends:
 - kde/libs/polkit-qt-1.bst
 
 - kde/frameworks/kirigami.bst
+- kde/libs/kirigami-addons.bst
 - kde/frameworks/kquickcharts.bst
 - kde/frameworks/kuserfeedback.bst
 - kde/qt6/qt6-qtdeclarative.bst
@@ -83,6 +84,9 @@ build-depends:
 - kde/frameworks/kwidgetsaddons.bst
 - kde/frameworks/kservice.bst
 - kde/frameworks/kxmlgui.bst
+depends:
+- kde/libs/kirigami-addons.bst
+
 variables:
   cmake-local: >-
     -DCMAKE_INSTALL_LIBEXECDIR=lib
