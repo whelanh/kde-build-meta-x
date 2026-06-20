@@ -19,13 +19,6 @@ variables:
     --with-tcsetpgrp
 
 config:
-  configure-commands:
-    (<):
-    - |
-      # GCC 15: zsh's 'static boolcodes[]' conflicts with ncurses extern 'boolcodes[]'.
-      # Rename to zsh_boolcodes to avoid the conflict (static so only used in this file).
-      sed -i 's/\bboolcodes\b/zsh_boolcodes/g' Src/Modules/termcap.c
-
   install-commands:
     (>):
     - |
