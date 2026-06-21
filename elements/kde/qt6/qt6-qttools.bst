@@ -8,6 +8,9 @@ build-depends:
 - freedesktop-sdk.bst:components/vulkan-headers.bst
 - kde/qt6/qt6-qtdeclarative.bst
 
+variables:
+  cmake-local: -DFEATURE_assistant=OFF
+
 config:
   # qtdiag/qtdiag6 are hard-linked; break them before the freedesktop-sdk
   # stripper runs (it refuses to process files with multiple hard links)
