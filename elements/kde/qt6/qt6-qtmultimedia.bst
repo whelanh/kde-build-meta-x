@@ -11,6 +11,11 @@ build-depends:
 - kde/qt6/qt6-qtshadertools.bst
 
 sources:
-- kind: tar
-  url: qt:6.10/6.10.3/submodules/qtmultimedia-everywhere-src-6.10.3.tar.xz
-  ref: dd228fe54051e8834ca53e558794742c8814f217849f9dfa8f9a9df80441903a
+- kind: git_repo
+  url: github:qt/qtmultimedia.git
+  track: 'v6.*'
+  exclude:
+  - '*rc*'
+  - '*alpha*'
+  - '*beta*'
+  ref: v6.10.3-0-gdf54b9d71bd5c83691b598942e19107dfc23c2a7

@@ -9,6 +9,11 @@ build-depends:
 - freedesktop-sdk.bst:components/mesa-headers.bst
 
 sources:
-- kind: tar
-  url: qt:6.10/6.10.3/submodules/qtquick3dphysics-everywhere-src-6.10.3.tar.xz
-  ref: 2abbc8e32df6d8f7e7ba5341c8032054459b95ff3b0c9601f61666931a10f5f6
+- kind: git_repo
+  url: github:qt/qtquick3dphysics.git
+  track: 'v6.*'
+  exclude:
+  - '*rc*'
+  - '*alpha*'
+  - '*beta*'
+  ref: v6.10.3-0-g45893efb0c2bde25658444341e8dc81e120389fc

@@ -10,6 +10,11 @@ build-depends:
 - kde/qt6/qt6-qtmultimedia.bst
 
 sources:
-- kind: tar
-  url: qt:6.10/6.10.3/submodules/qtspeech-everywhere-src-6.10.3.tar.xz
-  ref: 6616e435bd6069aac4357cd35f7cb6c01a77e804fa57c5f58d8b8031f2036c1d
+- kind: git_repo
+  url: github:qt/qtspeech.git
+  track: 'v6.*'
+  exclude:
+  - '*rc*'
+  - '*alpha*'
+  - '*beta*'
+  ref: v6.10.3-0-g42aa038973d7a0063dd2e1c84fb34c9a6ba5c1f0

@@ -21,6 +21,11 @@ config:
       done
 
 sources:
-- kind: tar
-  url: qt:6.10/6.10.3/submodules/qttools-everywhere-src-6.10.3.tar.xz
-  ref: 8f00b9e3d1f80973d81cff67684972b89993183ef19924404d5b8ff0f89675b6
+- kind: git_repo
+  url: github:qt/qttools.git
+  track: 'v6.*'
+  exclude:
+  - '*rc*'
+  - '*alpha*'
+  - '*beta*'
+  ref: v6.10.3-0-ge1d3bd1fb18ad9c1522e2d65c00e9a015456ebf6

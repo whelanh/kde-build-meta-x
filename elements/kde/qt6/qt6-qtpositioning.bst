@@ -9,6 +9,11 @@ build-depends:
 - freedesktop-sdk.bst:components/mesa-headers.bst
 
 sources:
-- kind: tar
-  url: qt:6.10/6.10.3/submodules/qtpositioning-everywhere-src-6.10.3.tar.xz
-  ref: 64cf6c5d1137378ec6a276d3f6e5be7b9d299436d66cea36ebd31035314287a2
+- kind: git_repo
+  url: github:qt/qtpositioning.git
+  track: 'v6.*'
+  exclude:
+  - '*rc*'
+  - '*alpha*'
+  - '*beta*'
+  ref: v6.10.3-0-gefa9d9ef8ecd662e2d1c743a494d92337a85a14d

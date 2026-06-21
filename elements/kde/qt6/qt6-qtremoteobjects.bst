@@ -9,6 +9,11 @@ build-depends:
 - freedesktop-sdk.bst:components/mesa-headers.bst
 
 sources:
-- kind: tar
-  url: qt:6.10/6.10.3/submodules/qtremoteobjects-everywhere-src-6.10.3.tar.xz
-  ref: fa8faa42fbc4c97ef087cd7e0e7b6f21288d66498113a3f5bc3681cf798d5968
+- kind: git_repo
+  url: github:qt/qtremoteobjects.git
+  track: 'v6.*'
+  exclude:
+  - '*rc*'
+  - '*alpha*'
+  - '*beta*'
+  ref: v6.10.3-0-g488695ef3ddc20113c72378922d700d471ad1e79

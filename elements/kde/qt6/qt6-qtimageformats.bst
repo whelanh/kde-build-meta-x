@@ -7,6 +7,11 @@ build-depends:
 - freedesktop-sdk.bst:components/mesa-headers.bst
 
 sources:
-- kind: tar
-  url: qt:6.10/6.10.3/submodules/qtimageformats-everywhere-src-6.10.3.tar.xz
-  ref: 84605dd91037482b5b7c7ecc5c27aee8acc1cd7f1fe77bc564777ddf365d7d28
+- kind: git_repo
+  url: github:qt/qtimageformats.git
+  track: 'v6.*'
+  exclude:
+  - '*rc*'
+  - '*alpha*'
+  - '*beta*'
+  ref: v6.10.3-0-gcc5f5661ef75f08da7064227de38bab6cc3b857c

@@ -49,6 +49,11 @@ config:
       done
 
 sources:
-- kind: tar
-  url: qt:6.10/6.10.3/submodules/qtbase-everywhere-src-6.10.3.tar.xz
-  ref: 383dc907816338f0cba72088a524c07458dfc69ce684ca9132fcc4fe91c24b0b
+- kind: git_repo
+  url: github:qt/qtbase.git
+  track: 'v6.*'
+  exclude:
+  - '*rc*'
+  - '*alpha*'
+  - '*beta*'
+  ref: v6.10.3-0-g7ddbc87d8e14ce51d2957ea72d0a6077593d5ff4

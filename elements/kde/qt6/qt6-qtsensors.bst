@@ -9,6 +9,11 @@ build-depends:
 - freedesktop-sdk.bst:components/mesa-headers.bst
 
 sources:
-- kind: tar
-  url: qt:6.10/6.10.3/submodules/qtsensors-everywhere-src-6.10.3.tar.xz
-  ref: c821ca985040f2326923d1ca05f2e91f7a45a1bf8bb8c072b712dfe1f7cb8d6e
+- kind: git_repo
+  url: github:qt/qtsensors.git
+  track: 'v6.*'
+  exclude:
+  - '*rc*'
+  - '*alpha*'
+  - '*beta*'
+  ref: v6.10.3-0-gaaeb066dda9033146c8732b7525ad463803391f3

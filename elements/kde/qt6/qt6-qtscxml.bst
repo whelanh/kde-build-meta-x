@@ -9,6 +9,11 @@ build-depends:
 - freedesktop-sdk.bst:components/mesa-headers.bst
 
 sources:
-- kind: tar
-  url: qt:6.10/6.10.3/submodules/qtscxml-everywhere-src-6.10.3.tar.xz
-  ref: 26d3e6ae104a762b4c957bf45a382efb1caec2e16333f8dfa88158a8f2620809
+- kind: git_repo
+  url: github:qt/qtscxml.git
+  track: 'v6.*'
+  exclude:
+  - '*rc*'
+  - '*alpha*'
+  - '*beta*'
+  ref: v6.10.3-0-ga71a1e25f23dabd41bba643488e2eb753d160b3f
