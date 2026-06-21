@@ -104,8 +104,6 @@ sources:
 - kind: patch
   path: patches/plasma-workspace/0002-make-kf6-texteditor-textwidgets-optional.patch
 - kind: patch
-  path: patches/plasma-workspace/0003-skip-kwin-virtualkeyboard-dbus-interface.patch
-- kind: patch
   path: patches/plasma-workspace/0004-make-breeze-optional.patch
 - kind: patch
   path: patches/plasma-workspace/0005-make-baloo-optional.patch
