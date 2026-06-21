@@ -6,6 +6,7 @@ build-depends:
 - kde/frameworks/extra-cmake-modules.bst
 - kde/frameworks/kdoctools.bst
 - kde/qt6/qt6-qtbase.bst
+- kde/qt6/qt6-qtgraphs.bst
 - kde/qt6/qt6-qtdeclarative.bst
 - freedesktop-sdk.bst:components/mesa-headers.bst
 - freedesktop-sdk.bst:components/libdrm.bst
@@ -40,7 +41,7 @@ variables:
     -DBUILD_QT5=OFF
     -DBUILD_WITH_QT6=ON
     -DQT_MAJOR_VERSION=6
-    -DCMAKE_DISABLE_FIND_PACKAGE_Qt6Graphs=ON
+    
     -DENABLE_OPENGL_BACKEND=OFF
     -DENABLE_VULKAN_BACKEND=OFF
     -DENABLE_ABOUT_DISTRO=OFF
