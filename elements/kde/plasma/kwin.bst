@@ -94,7 +94,7 @@ variables:
     -DBUILD_QT5=OFF
     -DBUILD_WITH_QT6=ON
     -DQT_MAJOR_VERSION=6
-    -DKWIN_BUILD_X11=ON
+    -DKWIN_BUILD_X11=OFF
     -DBUILD_WINDOW_KILLER=OFF
 
 sources:
@@ -103,4 +103,4 @@ sources:
   track: master
   ref: v6.5.90-429-g36a51bdf68aa263a4871d9128ff976ea04e7e70f
 - kind: patch
-  path: patches/kwin/0001-fix-missing-qqml-include.patch
+  path: patches/kwin/0001-killer-no-x11.patch
