@@ -7,6 +7,7 @@ build-depends:
 - kde/frameworks/kdoctools.bst
 - kde/qt6/qt6-qtbase.bst
 - kde/qt6/qt6-qtgraphs.bst
+- kde/qt6/qt6-qtquick3d.bst
 - kde/qt6/qt6-qtdeclarative.bst
 - freedesktop-sdk.bst:components/mesa-headers.bst
 - freedesktop-sdk.bst:components/libdrm.bst
