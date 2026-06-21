@@ -56,5 +56,3 @@ sources:
   ref: v24.01.90-936-g5ae0750cb0924a3676ad710167319bea2ae35620
 - kind: patch
   path: patches/konsole/0001-fix-dbus-qlist-double-introspection.patch
-- kind: patch
-  path: patches/konsole/0002-check-tempfile-open-for-shellcheck.patch
