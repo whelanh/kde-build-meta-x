@@ -9,6 +9,7 @@ build-depends:
 - kde/plasma/libplasma.bst
 
 - kde/frameworks/kirigami.bst
+- kde/libs/kirigami-addons.bst
 - kde/libs/qtkeychain-qt6.bst
 - kde/libs/qcoro.bst
 - kde/frameworks/prison.bst
