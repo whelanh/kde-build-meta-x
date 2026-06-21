@@ -13,6 +13,7 @@ build-depends:
 - freedesktop-sdk.bst:components/wayland-protocols.bst
 - kde/frameworks/kdoctools.bst
 - kde/frameworks/krunner.bst
+- kde/frameworks/kitemmodels.bst
 - kde/frameworks/plasma-wayland-protocols.bst
 # Wayland / graphics / input
 - freedesktop-sdk.bst:components/wayland.bst
