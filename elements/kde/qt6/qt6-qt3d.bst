@@ -2,7 +2,7 @@ kind: cmake
 description: qt6-qt3d
 
 variables:
-  cmake-local: -DFEATURE_assimp=OFF
+  cmake-local: -DINPUT_assimp=no
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
