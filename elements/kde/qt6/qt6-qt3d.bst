@@ -4,6 +4,12 @@ description: qt6-qt3d
 variables:
   cmake-local: -DINPUT_assimp=no
 
+config:
+  configure-commands:
+    (<):
+    - |
+      rm -rf src/3rdparty/assimp
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - kde/qt6/qt6-qtbase.bst
