@@ -49,6 +49,6 @@ sources:
 - kind: git_repo
   url: kde:plasma/kinfocenter.git
   track: master
-  ref: 4661524934085c1745ed1d2316269e1b74fbe681
+  ref: v6.6.90-41-gccf18ae684c0c1b80766dd31a6e0f6379d32a523
 - kind: patch
   path: patches/kinfocenter/0003-disable-vulkan-backend.patch

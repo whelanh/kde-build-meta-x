@@ -18,4 +18,4 @@ sources:
   - '*rc*'
   - '*alpha*'
   - '*beta*'
-  ref: v6.10.3-0-gdf54b9d71bd5c83691b598942e19107dfc23c2a7
+  ref: v6.11.1-0-g1cdfe8d416a173a85051e0028dd94d24311022e2

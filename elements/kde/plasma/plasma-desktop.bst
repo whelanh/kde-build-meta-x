@@ -95,6 +95,6 @@ sources:
 - kind: git_repo
   url: kde:plasma/plasma-desktop.git
   track: master
-  ref: v6.5.90-330-gdaa8621dfef57ea2a187ef6fc006f6d577322ff8
+  ref: v6.6.90-145-g6b4be7e35c959d0665e4b89144107e4aa1aa8ae4
 - kind: patch
   path: patches/plasma-desktop/0001-fix-libinput-pkgconfig.patch

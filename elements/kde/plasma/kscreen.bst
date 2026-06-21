@@ -47,4 +47,4 @@ sources:
 - kind: git_repo
   url: kde:plasma/kscreen.git
   track: master
-  ref: v6.5.90-65-gf1ea5ff40d1156962b7ef0a021894905d0c1d92b
+  ref: v6.6.90-35-gf41700f920c9baafe37bcab98a777bba813e7290

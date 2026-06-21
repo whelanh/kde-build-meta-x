@@ -77,5 +77,5 @@ sources:
 - kind: git_repo
   url: kde:plasma/libplasma.git
   track: master
-  ref: v6.5.90-89-g4ca334ae667b8268ae39527e026805060dae4399
+  ref: v6.6.90-52-gd4caafa9fe602ec47be1fae327137456ef5bb2ec
 

@@ -53,7 +53,7 @@ sources:
 - kind: git_repo
   url: kde:kde/konsole.git
   track: master
-  ref: v25.04.3-0-gbc359b16a01fc093835e36f21c22f691fea31b32
+  ref: v24.01.90-936-g5ae0750cb0924a3676ad710167319bea2ae35620
 - kind: patch
   path: patches/konsole/0001-fix-dbus-qlist-double-introspection.patch
 - kind: patch

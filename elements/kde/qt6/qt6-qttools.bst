@@ -31,4 +31,4 @@ sources:
   - '*rc*'
   - '*alpha*'
   - '*beta*'
-  ref: v6.10.3-0-ge1d3bd1fb18ad9c1522e2d65c00e9a015456ebf6
+  ref: v6.11.1-0-g947c5f152f4abc06f9e135b411c06a6fbe608aed

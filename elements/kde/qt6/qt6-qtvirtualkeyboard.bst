@@ -27,4 +27,4 @@ sources:
   - '*rc*'
   - '*alpha*'
   - '*beta*'
-  ref: v6.10.3-0-g2753383f1860c112bfc5e6794a7e2e90348aa3d1
+  ref: v6.11.1-0-g2eb5eda48077645a88609f7e6237cd5598253d8a

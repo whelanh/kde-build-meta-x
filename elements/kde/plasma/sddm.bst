@@ -41,7 +41,7 @@ sources:
 - kind: git_repo
   url: github:sddm/sddm.git
   track: v0.21.0
-  ref: 63780fcd79f1dbf81a30eef48c28c699ab15aded
+  ref: v0.21.0-0-g63780fcd79f1dbf81a30eef48c28c699ab15aded
 
 config:
   install-commands:

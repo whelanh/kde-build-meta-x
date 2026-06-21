@@ -50,4 +50,4 @@ sources:
 - kind: git_repo
   url: kde:plasma/milou.git
   track: master
-  ref: v6.5.90-19-gabdfef7f0e42d738e6839f5a8df07436fd15bbf7
+  ref: v6.6.90-7-gc963efcb35000c7ab54bcf6fa2e0cde3ce53fabd
