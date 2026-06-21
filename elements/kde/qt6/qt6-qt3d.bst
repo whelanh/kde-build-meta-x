@@ -2,13 +2,7 @@ kind: cmake
 description: qt6-qt3d
 
 variables:
-  cmake-local: -DINPUT_assimp=no
-
-config:
-  configure-commands:
-    (<):
-    - |
-      rm -rf src/3rdparty/assimp src/plugins/sceneparsers/assimp
+  cmake-local: -DQT_FEATURE_qt3d_assimp=OFF
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
