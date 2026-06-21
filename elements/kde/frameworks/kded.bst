@@ -23,4 +23,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kded.git
   track: master
-  ref: v6.25.0-rc1-5-g31d1d41845aff8d5690fcc1c547bc658c161d7b9
+  ref: v6.27.0-rc1-4-gd17d444b54f8de50fd0cec14f8e5c4858a7cf6eb

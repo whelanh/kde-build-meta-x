@@ -20,4 +20,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kirigami.git
   track: master
-  ref: v6.25.0-rc1-40-g3ae494070c7c50d92fed7f41906f7a583b9d855d
+  ref: v6.27.0-rc1-11-gec09d7440c7cd30c9dc6892b476086b63921b982

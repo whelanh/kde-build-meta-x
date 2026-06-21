@@ -25,4 +25,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/ksvg.git
   track: master
-  ref: v6.25.0-rc1-3-ge8dbd4b884127d23db25c12404764b438106256e
+  ref: v6.27.0-rc1-5-ge2e4bf327a3a873e274ab38cef9db20b0a1b78d2

@@ -18,4 +18,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kauth.git
   track: master
-  ref: v6.25.0-rc1-1-gfc80b8b5d8e78d9a296fea9ee15151f9d2a084bc
+  ref: v6.27.0-rc1-4-ge173bc8595251e814cd7777e6d6845aab802e3bd

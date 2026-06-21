@@ -17,4 +17,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kquickcharts.git
   track: master
-  ref: v6.25.0-rc1-4-g66ffd6271e58ae6879ed77d551a2eafa533d71fd
+  ref: v6.27.0-rc1-1-g30f928a5865c2086cf85aa45dd6c15360ae40238

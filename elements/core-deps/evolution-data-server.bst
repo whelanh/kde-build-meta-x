@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: gnome:evolution-data-server.git
   track: master
-  ref: 3.60.0-16-ge611b762a89c58ce7fd9d4540665ed64c0240e6b
+  ref: 3.60.0-89-g57a017d3565500797dc6214a93c65cdf9cb5ad1e
 
 build-depends:
 - sdk/gobject-introspection.bst

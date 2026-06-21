@@ -51,7 +51,7 @@ sources:
 - kind: git_repo
   url: kde:network/kdeconnect-kde.git
   track: master
-  ref: v24.01.90-1188-gb1562d54001aeb6a0aed4da92dc761aed6320232
+  ref: v24.01.90-1259-g932a8ca890593bd2a5419d62e06d774974b60349
 - kind: patch
   path: patches/kdeconnect/0001-make-kpeople-optional.patch
 - kind: patch

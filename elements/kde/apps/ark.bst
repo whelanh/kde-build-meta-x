@@ -50,4 +50,4 @@ sources:
 - kind: git_repo
   url: kde:utilities/ark.git
   track: master
-  ref: v24.01.90-472-g16a937fa783bd2986b173ddd45d1fb5b5cbb6d8c
+  ref: v24.01.90-489-gc71d2a7322cd0ddb8fdfc27dfa780e5de6c120d0

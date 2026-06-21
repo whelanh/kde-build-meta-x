@@ -57,4 +57,4 @@ sources:
 - kind: git_repo
   url: kde:utilities/kate.git
   track: master
-  ref: v24.01.90-2477-g159fa1588f6d9045af2acb3ba8a7f47091736902
+  ref: v24.01.90-2595-g865d7fc88d27da3565834503d37da5bbfb3d8031

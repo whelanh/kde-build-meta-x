@@ -24,4 +24,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/krunner.git
   track: master
-  ref: v6.25.0-rc1-2-g4bf69681d9b459f9a1a0c0548cc01ba6e96c802a
+  ref: v6.27.0-rc1-3-ga82ee722416f5b7d4598dda43e6b613ac631486e

@@ -28,4 +28,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kdoctools.git
   track: master
-  ref: v6.25.0-rc1-1-g1015e3d4ba22bde5f5a580d1aa1cf14f8da7335e
+  ref: v6.27.0-rc1-3-gce544508d285de565f869243177abe89ae22eb59

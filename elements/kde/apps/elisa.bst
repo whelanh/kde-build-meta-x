@@ -50,4 +50,4 @@ sources:
 - kind: git_repo
   url: kde:multimedia/elisa.git
   track: master
-  ref: v24.01.90-876-ga3bf013cfee86b493ce4ac282e60b73808276db1
+  ref: v24.01.90-893-g31adb60a7acf89250e922784f5057e49bd5967e9

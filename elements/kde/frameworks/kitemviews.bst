@@ -17,4 +17,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kitemviews.git
   track: master
-  ref: v6.25.0-rc1-2-gf50ce4208ff8a772d89db2546ad7b47dc9e87c33
+  ref: v6.27.0-rc1-2-g38c4ffd42f702699bc710fed3502dcab6f518792

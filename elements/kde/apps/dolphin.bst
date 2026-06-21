@@ -58,5 +58,5 @@ sources:
 - kind: git_repo
   url: kde:system/dolphin.git
   track: master
-  ref: v24.01.90-1320-g6cbee2ac13d4b414c94c33325e18487683a44b57
+  ref: v24.01.90-1418-gddcc1f2db0f75016cc7d899cf9879f9359a346ab
 

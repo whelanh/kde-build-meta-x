@@ -16,4 +16,4 @@ sources:
 - kind: git_repo
   url: kde:libraries/kquickimageeditor.git
   track: master
-  ref: d1ae60cde0c821ce207a52069f4b43ad77819991
+  ref: v0.6.2-1-gf75a26d66979cca2b38ae8dbdede5193c1998387
