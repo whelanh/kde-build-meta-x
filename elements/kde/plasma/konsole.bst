@@ -48,6 +48,7 @@ variables:
     -DBUILD_WITH_QT6=ON
     -DQT_MAJOR_VERSION=6
     -DUSE_DBUS=OFF
+    -DCMAKE_DISABLE_FIND_PACKAGE_libssh=ON
 
 sources:
 - kind: git_repo

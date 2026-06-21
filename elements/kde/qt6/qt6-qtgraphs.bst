@@ -5,6 +5,7 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - kde/qt6/qt6-qtbase.bst
 - kde/qt6/qt6-qtdeclarative.bst
+- kde/qt6/qt6-qtshadertools.bst
 - kde/qt6/qt6-qtquick3d.bst
 - freedesktop-sdk.bst:components/mesa-headers.bst
 
