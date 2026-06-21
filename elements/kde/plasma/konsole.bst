@@ -5,6 +5,7 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - kde/frameworks/extra-cmake-modules.bst
 - kde/qt6/qt6-qtbase.bst
+- core-deps/libssh.bst
 - kde/qt6/qt6-qtmultimedia.bst
 - kde/qt6/qt6-qtspeech.bst
 - kde/frameworks/kdoctools.bst
@@ -48,7 +49,7 @@ variables:
     -DBUILD_WITH_QT6=ON
     -DQT_MAJOR_VERSION=6
     -DUSE_DBUS=OFF
-    -DCMAKE_DISABLE_FIND_PACKAGE_libssh=ON
+    
 
 sources:
 - kind: git_repo
