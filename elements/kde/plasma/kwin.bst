@@ -107,7 +107,4 @@ sources:
   path: patches/kwin/0001-killer-no-x11.patch
 - kind: patch
   path: patches/kwin/0002-fix-missing-qqml-include.patch
-- kind: patch
-  path: patches/kwin/0003-fix-vulkan-hpp-compat.patch
-- kind: patch
-  path: patches/kwin/0004-remove-vulkan-assert-on-result.patch
+

@@ -62,3 +62,4 @@ config:
     components/systemd-libs.bst: core-deps/systemd-libs.bst
 
     components/geoclue-base.bst: kde-linux-deps/geoclue-base.bst
+    components/vulkan-headers.bst: core-deps/vulkan-headers.bst
