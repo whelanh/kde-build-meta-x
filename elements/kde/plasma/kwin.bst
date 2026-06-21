@@ -102,3 +102,5 @@ sources:
   url: kde:plasma/kwin.git
   track: master
   ref: v6.5.90-429-g36a51bdf68aa263a4871d9128ff976ea04e7e70f
+- kind: patch
+  path: patches/kwin/0001-fix-missing-qqml-include.patch
