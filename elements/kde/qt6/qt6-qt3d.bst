@@ -1,6 +1,9 @@
 kind: cmake
 description: qt6-qt3d
 
+variables:
+  cmake-local: -DFEATURE_assimp=OFF
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - kde/qt6/qt6-qtbase.bst

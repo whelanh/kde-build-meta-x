@@ -1,6 +1,9 @@
 kind: cmake
 description: qt6-qtquick3d
 
+variables:
+  cmake-local: -DFEATURE_quick3d_assimp=OFF
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - kde/qt6/qt6-qtbase.bst
