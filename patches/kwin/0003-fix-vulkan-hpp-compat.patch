@@ -1,0 +1,30 @@
+--- a/src/multigpuswapchain.cpp
++++ b/src/multigpuswapchain.cpp
+@@ -184,13 +184,9 @@
+     m_journal.add(damage);
+ 
+     auto commandBuffer = copyVk->createCommandBuffer();
+-    vk::Result result = commandBuffer.begin(vk::CommandBufferBeginInfo{
++    commandBuffer.begin(vk::CommandBufferBeginInfo{
+         vk::CommandBufferUsageFlagBits::eOneTimeSubmit,
+     });
+-    if (result != vk::Result::eSuccess) {
+-        m_journal.clear();
+-        return std::nullopt;
+-    }
+ 
+     std::unique_ptr<VulkanRenderTimeQuery> query;
+     if (frame) {
+@@ -266,11 +262,7 @@
+         frame->addRenderTimeQuery(std::move(query));
+     }
+ 
+-    result = commandBuffer.end();
+-    if (result != vk::Result::eSuccess) {
+-        m_journal.clear();
+-        return std::nullopt;
+-    }
++    commandBuffer.end();
+     auto completionFd = copyVk->submit(std::move(commandBuffer), std::move(sync));
+     if (!completionFd.has_value()) {
+         m_needsRecreation = true;
