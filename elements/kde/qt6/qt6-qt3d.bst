@@ -8,7 +8,7 @@ config:
   configure-commands:
     (<):
     - |
-      rm -rf src/3rdparty/assimp
+      rm -rf src/3rdparty/assimp src/plugins/sceneparsers/assimp
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
