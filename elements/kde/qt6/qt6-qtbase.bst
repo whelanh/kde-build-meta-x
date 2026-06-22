@@ -4,12 +4,13 @@ description: Qt6 base module
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - freedesktop-sdk.bst:components/vulkan-headers.bst
-- freedesktop-sdk.bst:components/fontconfig.bst
-- freedesktop-sdk.bst:components/freetype.bst
-- freedesktop-sdk.bst:components/harfbuzz.bst
 
 depends:
 - freedesktop-sdk.bst:components/openssl.bst
+- freedesktop-sdk.bst:components/fontconfig.bst
+- freedesktop-sdk.bst:components/freetype.bst
+- freedesktop-sdk.bst:components/harfbuzz.bst
+- freedesktop-sdk.bst:components/libpng.bst
 - freedesktop-sdk.bst:components/sqlite.bst
 - freedesktop-sdk.bst:components/mesa-headers.bst
 - freedesktop-sdk.bst:components/wayland.bst
