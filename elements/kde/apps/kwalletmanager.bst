@@ -24,6 +24,13 @@ build-depends:
 - kde/frameworks/kwidgetsaddons.bst
 - kde/frameworks/kwindowsystem.bst
 - kde/frameworks/kxmlgui.bst
+# libKF6XmlGui links kglobalaccel; libKF6IconThemes links breeze-icons
+- kde/frameworks/kglobalaccel.bst
+- kde/frameworks/breeze-icons.bst
+# meinproc6 (from kdoctools) needs libxslt at runtime during doc generation
+- freedesktop-sdk.bst:components/libxslt.bst
+- freedesktop-sdk.bst:components/docbook-xml.bst
+- freedesktop-sdk.bst:components/docbook-xsl.bst
 
 variables:
   cmake-local: >-

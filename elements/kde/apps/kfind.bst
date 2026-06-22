@@ -5,6 +5,10 @@ build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - kde/frameworks/extra-cmake-modules.bst
 - kde/frameworks/kdoctools.bst
+# meinproc6 (from kdoctools) needs libxslt at runtime during doc generation
+- freedesktop-sdk.bst:components/libxslt.bst
+- freedesktop-sdk.bst:components/docbook-xml.bst
+- freedesktop-sdk.bst:components/docbook-xsl.bst
 - kde/qt6/qt6-qtbase.bst
 - kde/qt6/qt6-qt5compat.bst
 - kde/frameworks/karchive.bst
