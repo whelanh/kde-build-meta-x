@@ -1,6 +1,13 @@
 kind: cmake
 description: kcalc - KDE calculator
 
+depends:
+# Runtime arbitrary-precision math libraries (Arch kcalc depends: gmp, mpfr, libmpc).
+# Required at runtime, not just build time — kcalc links libgmp/libmpfr/libmpc.
+- freedesktop-sdk.bst:components/gmp.bst
+- freedesktop-sdk.bst:components/mpfr.bst
+- core-deps/mpc.bst
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - kde/frameworks/extra-cmake-modules.bst

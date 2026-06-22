@@ -1,6 +1,10 @@
 kind: cmake
 description: libksysguard
 
+depends:
+# libnl (netlink) is a runtime dependency (Arch libksysguard depends: libnl).
+- freedesktop-sdk.bst:components/libnl.bst
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - kde/frameworks/extra-cmake-modules.bst

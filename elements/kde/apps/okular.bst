@@ -1,6 +1,10 @@
 kind: cmake
 description: okular - KDE document viewer
 
+depends:
+# libtiff is a runtime dependency (Arch okular depends: libtiff).
+- freedesktop-sdk.bst:components/libtiff.bst
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - kde/frameworks/extra-cmake-modules.bst

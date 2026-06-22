@@ -1,6 +1,10 @@
 kind: cmake
 description: kate - Advanced text editor
 
+depends:
+# gpgmepp is a runtime dependency (Arch kate depends: gpgmepp).
+- freedesktop-sdk.bst:components/gpgmepp.bst
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - kde/frameworks/extra-cmake-modules.bst

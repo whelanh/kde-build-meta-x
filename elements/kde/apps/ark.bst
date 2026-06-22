@@ -1,6 +1,10 @@
 kind: cmake
 description: ark - KDE archive manager
 
+depends:
+# libarchive is the runtime archive backend (Arch ark depends: libarchive).
+- freedesktop-sdk.bst:components/libarchive.bst
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - kde/frameworks/extra-cmake-modules.bst

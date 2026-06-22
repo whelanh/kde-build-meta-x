@@ -1,6 +1,11 @@
 kind: cmake
 description: kpipewire
 
+depends:
+# ffmpeg is a runtime dependency for screen recording/encoding
+# (Arch kpipewire depends: ffmpeg).
+- freedesktop-sdk.bst:components/ffmpeg.bst
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - kde/frameworks/extra-cmake-modules.bst

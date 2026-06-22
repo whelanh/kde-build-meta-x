@@ -1,6 +1,12 @@
 kind: cmake
 description: spectacle
 
+depends:
+# ffmpeg + libva are runtime dependencies for screen recording/encoding
+# (pulled transitively via kpipewire; Arch kpipewire depends: ffmpeg, libva).
+- freedesktop-sdk.bst:components/ffmpeg.bst
+- freedesktop-sdk.bst:components/libva.bst
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - kde/frameworks/extra-cmake-modules.bst
