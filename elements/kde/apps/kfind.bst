@@ -22,6 +22,11 @@ build-depends:
 - kde/frameworks/kio.bst
 - kde/frameworks/kwidgetsaddons.bst
 - kde/frameworks/kxmlgui.bst
+# libKF6XmlGui links kglobalaccel; libKF6JobWidgets links knotifications;
+# libKF6IconThemes links breeze-icons
+- kde/frameworks/kglobalaccel.bst
+- kde/frameworks/knotifications.bst
+- kde/frameworks/breeze-icons.bst
 
 variables:
   cmake-local: >-
