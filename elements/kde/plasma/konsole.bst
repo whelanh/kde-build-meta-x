@@ -1,11 +1,13 @@
 kind: cmake
 description: konsole
 
+depends:
+- core-deps/libssh.bst
+
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-cmake.bst
 - kde/frameworks/extra-cmake-modules.bst
 - kde/qt6/qt6-qtbase.bst
-- core-deps/libssh.bst
 - kde/qt6/qt6-qtmultimedia.bst
 - kde/qt6/qt6-qtspeech.bst
 - kde/frameworks/kdoctools.bst
