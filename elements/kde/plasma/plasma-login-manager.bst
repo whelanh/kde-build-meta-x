@@ -17,6 +17,36 @@ build-depends:
 - kde/frameworks/kauth.bst
 - kde/frameworks/kio.bst
 - kde/frameworks/kcoreaddons.bst
+# KCMUtils / KIO / ConfigWidgets pull these in via CMake find_dependency() at
+# configure time, so their CMake configs must be present in the sandbox even
+# though plasma-login-manager does not use them directly.
+- kde/frameworks/kconfigwidgets.bst
+- kde/frameworks/kwidgetsaddons.bst
+- kde/frameworks/kguiaddons.bst
+- kde/frameworks/kcolorscheme.bst
+- kde/frameworks/kcodecs.bst
+- kde/frameworks/kcompletion.bst
+- kde/frameworks/kitemviews.bst
+- kde/frameworks/kiconthemes.bst
+- kde/frameworks/kxmlgui.bst
+- kde/frameworks/kglobalaccel.bst
+- kde/frameworks/kservice.bst
+- kde/frameworks/kjobwidgets.bst
+- kde/frameworks/kbookmarks.bst
+- kde/frameworks/kcrash.bst
+- kde/frameworks/solid.bst
+- kde/frameworks/kirigami.bst
+- kde/frameworks/karchive.bst
+- kde/frameworks/breeze-icons.bst
+# libPlasma (PlasmaQuick) links these, so they must be present when linking
+# plasma-login-manager against libPlasma (otherwise: undefined references to
+# KSvg::*, KNotificationAction::*, etc.).
+- kde/frameworks/ksvg.bst
+- kde/frameworks/knotifications.bst
+- kde/plasma/plasma-activities.bst
+- kde/qt6/qt6-qtwayland.bst
+- kde/qt6/qt6-qtsvg.bst
+- kde/qt6/qt6-qt5compat.bst
 # PlasmaQuick / LibKWorkspace / LibKLookAndFeel / LayerShellQt / KF6Screen
 - kde/plasma/libplasma.bst
 - kde/plasma/layer-shell-qt.bst
