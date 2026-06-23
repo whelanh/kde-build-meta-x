@@ -17,5 +17,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/modemmanager-qt.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-1-g0c779dedec997bfb46091e11c325b929242532f2

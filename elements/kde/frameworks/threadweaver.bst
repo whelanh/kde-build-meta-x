@@ -16,5 +16,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/threadweaver.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-1-ga12cdf39af75c363e3f69be5bf2a3db01d845413

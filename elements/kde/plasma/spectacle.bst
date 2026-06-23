@@ -65,7 +65,7 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/spectacle.git
-  track: master
+  track: 'v6.*'
   ref: v6.6.90-29-gee04b31d3b17ce1c8ed7d15dc0428ca7636d6684
 - kind: patch
   path: patches/spectacle/0001-disable-ocr-without-external-deps.patch

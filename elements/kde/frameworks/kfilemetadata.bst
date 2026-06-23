@@ -21,5 +21,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kfilemetadata.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-3-gdfd71e23c3079707f9212143b62c2416ebbca422

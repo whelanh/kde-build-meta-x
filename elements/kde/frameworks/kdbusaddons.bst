@@ -16,5 +16,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kdbusaddons.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-2-g5a81543ffc661a7e5ecbcf769571ecb63ac7799b

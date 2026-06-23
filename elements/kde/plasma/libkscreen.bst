@@ -27,6 +27,6 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/libkscreen.git
-  track: master
+  track: 'v6.*'
   ref: v6.6.90-25-g39462646052bf85e3a1cbcae2612a28db9f45579
 

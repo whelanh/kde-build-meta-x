@@ -41,5 +41,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kcmutils.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-6-g9a6df9a08aeb8e6decf8fc926900a58fea9946a6

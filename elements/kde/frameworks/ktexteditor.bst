@@ -35,5 +35,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/ktexteditor.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-21-gd58be29fda53549c0f6f4161cdb1b823cbc7585e

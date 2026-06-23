@@ -23,5 +23,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/knotifications.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-4-g2532b32c06b09dd27cb3db727a181b9c647b733f

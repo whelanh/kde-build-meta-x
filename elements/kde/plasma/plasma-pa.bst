@@ -39,5 +39,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/plasma-pa.git
-  track: master
+  track: 'v6.*'
   ref: v6.6.90-12-gc752bcd96c6af71e5a14f240d3949a1c26af0068

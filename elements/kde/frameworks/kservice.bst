@@ -21,5 +21,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kservice.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-4-g7e643dbcd3d780894278a036417ce50ef46a5ebd

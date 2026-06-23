@@ -20,5 +20,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/networkmanager-qt.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-1-g73711fb543b109610a24bf7fd781eca2610e3cd7

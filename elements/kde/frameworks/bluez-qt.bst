@@ -16,5 +16,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/bluez-qt.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-1-gc4cec410cea0108c4f256649d381bd7d416e7f7f

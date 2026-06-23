@@ -52,5 +52,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/plasma-nm.git
-  track: master
+  track: 'v6.*'
   ref: v6.6.90-50-ga796efb93f91b9c6c33506f5131e2bf5b8f22193

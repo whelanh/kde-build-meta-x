@@ -38,5 +38,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kdeclarative.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-5-g6f1f5344d3f6cff86837a396598da8643808fc95

@@ -16,5 +16,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kdnssd.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-4-g2416ac2601a6cb3ec5cbe49c8bb377955dab89b8

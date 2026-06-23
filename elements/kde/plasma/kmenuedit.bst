@@ -40,5 +40,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/kmenuedit.git
-  track: master
+  track: 'v6.*'
   ref: v6.6.90-14-g86b440a5691e53cb412e4731ed13db261f63c354

@@ -76,6 +76,6 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/libplasma.git
-  track: master
+  track: 'v6.*'
   ref: v6.6.90-52-gd4caafa9fe602ec47be1fae327137456ef5bb2ec
 

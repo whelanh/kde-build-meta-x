@@ -40,5 +40,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/libksysguard.git
-  track: master
+  track: 'v6.*'
   ref: v6.6.90-19-g6d693540829fec02145b5994d078b9b6266b8412

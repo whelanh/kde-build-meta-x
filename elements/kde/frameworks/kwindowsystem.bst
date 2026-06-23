@@ -30,5 +30,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kwindowsystem.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-5-g9beda3c96988ef5a392c659a06f02bc4942fccbe

@@ -21,5 +21,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/ksshaskpass.git
-  track: master
+  track: 'v6.*'
   ref: v6.6.90-9-gc55475bb87bfe5509b428a599762636a6e3f12c5

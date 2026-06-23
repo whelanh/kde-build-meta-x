@@ -28,5 +28,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/qqc2-breeze-style.git
-  track: master
+  track: 'v6.*'
   ref: v6.6.90-3-g6cc425527cdae6f7ffdddcbacead907ac6464b2f

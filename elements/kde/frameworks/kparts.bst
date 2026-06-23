@@ -40,5 +40,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kparts.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-3-g73fe063fb10637b77ec8107ab187b14736bddaf5

@@ -42,5 +42,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/knewstuff.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-3-g9cf941d40c5760ca1b0daa1b5101c43f90728a13

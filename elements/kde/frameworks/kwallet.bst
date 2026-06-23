@@ -30,5 +30,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kwallet.git
-  track: master
+  track: 'v6.*'
   ref: v6.27.0-rc1-5-gf8808aa0ab88de74694752ecdd00cd56fbf7ff6d
