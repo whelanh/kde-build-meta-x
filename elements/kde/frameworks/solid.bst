@@ -24,5 +24,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/solid.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-13-ga8fb2be85508b06dc7ef0149e3c1fe5522c1f2d7

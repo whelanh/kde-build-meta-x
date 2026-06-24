@@ -35,5 +35,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/aurorae.git
-  track: 'v6.*'
+  track: master
   ref: v6.6.90-11-gffecc4126106a7152de3410d91999a39a4e5fb27

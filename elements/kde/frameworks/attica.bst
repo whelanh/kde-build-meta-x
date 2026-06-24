@@ -16,5 +16,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/attica.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-1-g0c9628f31d622d94ce3c0a265cb345666b441038

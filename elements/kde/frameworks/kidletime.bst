@@ -19,5 +19,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kidletime.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-1-g76b34a1a5842c566256f9a960347c0e836252c65

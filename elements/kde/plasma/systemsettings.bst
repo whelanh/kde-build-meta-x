@@ -50,5 +50,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/systemsettings.git
-  track: 'v6.*'
+  track: master
   ref: v6.6.90-13-gf6c4cc26a60e65eedaf02e582e416fa227b27c4c

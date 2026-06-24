@@ -16,5 +16,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kitemviews.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-2-g38c4ffd42f702699bc710fed3502dcab6f518792

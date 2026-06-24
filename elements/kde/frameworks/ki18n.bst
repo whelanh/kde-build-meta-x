@@ -17,5 +17,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/ki18n.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-6-g7d82b31d5c8fa713ffab6c975d99fc8c92bd2992

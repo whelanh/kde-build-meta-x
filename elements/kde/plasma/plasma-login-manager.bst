@@ -89,7 +89,7 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/plasma-login-manager.git
-  track: 'v6.*'
+  track: master
   ref: v6.6.90-30-gf128489b7adef9be8c7495acbf4fee7dc923722b
 
 config:

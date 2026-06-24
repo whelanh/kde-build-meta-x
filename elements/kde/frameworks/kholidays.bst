@@ -18,5 +18,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kholidays.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-6-gfa651bb41ed521fca506271c3db16ea2100bd387

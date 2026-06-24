@@ -30,5 +30,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kxmlgui.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-11-g7b49371c2333f874d1ae466d3afa52d2c5eb6f6b

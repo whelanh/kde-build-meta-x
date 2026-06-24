@@ -20,5 +20,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kpackage.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-5-g4750e4ec9476ffad83b475a28582b40a45455dae

@@ -17,5 +17,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/syntax-highlighting.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-12-gccb31f722406d5b980ba57cf71a3ffab70a82847

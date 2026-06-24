@@ -22,5 +22,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/sonnet.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-2-gf28dfe7ce9487466083c90650fb49ca1fa61dcf5

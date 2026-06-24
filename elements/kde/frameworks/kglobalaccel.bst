@@ -16,5 +16,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kglobalaccel.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-3-gee2b6ff5bdc218332cf8f08ca8b26db946d7b68f

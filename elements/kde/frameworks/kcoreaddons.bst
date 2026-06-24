@@ -20,5 +20,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kcoreaddons.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-12-ga4d8c195d129fe3c9f281ac985407eb181242d80

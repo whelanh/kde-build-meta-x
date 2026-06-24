@@ -22,5 +22,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kded.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-4-gd17d444b54f8de50fd0cec14f8e5c4858a7cf6eb

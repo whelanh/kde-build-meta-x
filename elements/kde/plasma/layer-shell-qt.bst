@@ -26,5 +26,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/layer-shell-qt.git
-  track: 'v6.*'
+  track: master
   ref: v6.6.90-4-g4488263f9432e86cca7234273f6621ce92d19744

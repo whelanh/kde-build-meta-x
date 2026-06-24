@@ -34,5 +34,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/kactivitymanagerd.git
-  track: 'v6.*'
+  track: master
   ref: v6.6.90-10-g63c89b8cd14f65502a2b7e1645b6002438cb190b

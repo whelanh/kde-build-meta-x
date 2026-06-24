@@ -27,5 +27,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kdoctools.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-3-gce544508d285de565f869243177abe89ae22eb59

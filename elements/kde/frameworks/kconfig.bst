@@ -16,5 +16,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kconfig.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-8-gcdab6455aa3e6c3d198cd7ce3a5c8f9034ecdc88

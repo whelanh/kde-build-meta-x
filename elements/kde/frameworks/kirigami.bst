@@ -19,5 +19,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:frameworks/kirigami.git
-  track: 'v6.*'
+  track: master
   ref: v6.27.0-rc1-11-gec09d7440c7cd30c9dc6892b476086b63921b982

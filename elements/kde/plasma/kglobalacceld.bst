@@ -49,5 +49,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/kglobalacceld.git
-  track: 'v6.*'
+  track: master
   ref: v6.6.90-22-g099b1e9dcb52ea2524718ac56f4ce3339b534873

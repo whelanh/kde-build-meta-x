@@ -30,5 +30,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/knighttime.git
-  track: 'v6.*'
+  track: master
   ref: v6.6.90-4-g983723fe45d8ac08ae0295654e16696de14a07a0

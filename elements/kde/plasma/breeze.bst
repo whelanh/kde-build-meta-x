@@ -46,5 +46,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:plasma/breeze.git
-  track: 'v6.*'
+  track: master
   ref: v6.6.90-28-g80b5f54c7a5f61a35861c565c834c4597d4f9279

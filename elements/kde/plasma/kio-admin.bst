@@ -19,5 +19,5 @@ variables:
 sources:
 - kind: git_repo
   url: kde:system/kio-admin.git
-  track: 'v6.*'
+  track: master
   ref: v24.01.90-141-gbccb6da1a317512373cc351f7c038c7de9661c4a
