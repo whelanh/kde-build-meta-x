@@ -93,6 +93,6 @@ variables:
 
 sources:
 - kind: git_repo
-  url: github:KDE/plasma-desktop.git
+  url: kde:plasma/plasma-desktop.git
   track: master
-  ref: v6.7.1-0-gb17250186acd03972f9368f6f045223f53f6ded0
+  ref: v6.6.90-145-g6b4be7e35c959d0665e4b89144107e4aa1aa8ae4
