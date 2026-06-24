@@ -96,7 +96,7 @@ variables:
 
 sources:
 - kind: git_repo
-  url: kde:plasma/plasma-workspace.git
+  url: https://github.com/KDE/plasma-workspace.git
   track: master
   ref: v6.7.1-0-ga2a0b3a49c240eb7bbc9ff46a94d7f91e8e7618c
 - kind: patch
