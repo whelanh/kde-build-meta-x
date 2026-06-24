@@ -56,6 +56,8 @@ build-depends:
 - freedesktop-sdk.bst:components/systemd-libs.bst
 - freedesktop-sdk.bst:components/linux-pam-base.bst
 - freedesktop-sdk.bst:components/xorg-lib-xau.bst
+# libklookandfeel at v6.7.1 pulls Xcursor symbols; must be available at link time
+- freedesktop-sdk.bst:components/xorg-lib-xcursor.bst
 
 depends:
 - freedesktop-sdk.bst:components/dejavu-fonts.bst
