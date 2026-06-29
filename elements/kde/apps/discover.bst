@@ -11,8 +11,6 @@ build-depends:
 # AppStream — C library (BASE) and Qt bindings (AppStreamQt — REQUIRED)
 - freedesktop-sdk.bst:components/appstream.bst
 - core-deps/appstream-qt.bst
-# PackageKit Qt6 bindings — enables the PackageKit backend for system package management
-- core-deps/packagekit-qt6.bst
 - kde/frameworks/kcmutils.bst
 - kde/frameworks/kconfig.bst
 - kde/frameworks/kcoreaddons.bst
@@ -55,8 +53,6 @@ depends:
 - freedesktop-sdk.bst:components/flatpak.bst
 - freedesktop-sdk.bst:components/appstream.bst
 - core-deps/appstream-qt.bst
-- core-deps/packagekit-qt6.bst
-- core-deps/packagekit.bst
 - kde/libs/qcoro.bst
 
 variables:
@@ -70,7 +66,6 @@ variables:
     -DBUILD_QT5=OFF
     -DBUILD_WITH_QT6=ON
     -DQT_MAJOR_VERSION=6
-    -DBUILD_PackageKitBackend=ON
 
 sources:
 - kind: git_repo
