@@ -8,17 +8,19 @@ build-depends:
 - freedesktop-sdk.bst:components/jansson.bst
 - freedesktop-sdk.bst:components/polkit.bst
 - freedesktop-sdk.bst:components/sqlite.bst
+- freedesktop-sdk.bst:components/systemd.bst
 - sdk/glib.bst
 
 depends:
 - sdk/glib.bst
 - freedesktop-sdk.bst:components/polkit.bst
 - freedesktop-sdk.bst:components/sqlite.bst
+- freedesktop-sdk.bst:components/systemd.bst
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
 
 variables:
   meson-local: >-
-    -Dsystemd=false
+    -Dsystemd=true
     -Dgstreamer_plugin=false
     -Dgtk_module=false
     -Dcron=false
