@@ -8,6 +8,7 @@ build-depends:
 - kde/qt6/qt6-qtdeclarative.bst
 - kde/frameworks/kconfig.bst
 - freedesktop-sdk.bst:components/mesa-headers.bst
+- freedesktop-sdk.bst:components/opencv.bst
 
 variables:
   cmake-local: -DBUILD_TESTING=OFF
