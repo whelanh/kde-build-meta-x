@@ -43,7 +43,6 @@ variables:
     -DBUILD_WITH_QT6=ON
     -DQT_MAJOR_VERSION=6
     -DENABLE_OPENGL_BACKEND=OFF
-    -DENABLE_VULKAN_BACKEND=OFF
     -DENABLE_ABOUT_DISTRO=OFF
     -DCMAKE_DISABLE_FIND_PACKAGE_Sensors=ON
 
@@ -52,5 +51,3 @@ sources:
   url: kde:plasma/kinfocenter.git
   track: master
   ref: v6.6.90-57-g96a26b747e931532b695994081059465b9a6efc6
-- kind: patch
-  path: patches/kinfocenter/0003-disable-vulkan-backend.patch
