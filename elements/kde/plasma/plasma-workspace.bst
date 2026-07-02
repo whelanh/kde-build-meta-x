@@ -98,7 +98,7 @@ sources:
 - kind: git_repo
   url: kde:plasma/plasma-workspace.git
   track: master
-  ref: v6.6.90-252-g2e066db85e3e4ec63cce26107058303a363e90b9
+  ref: v6.6.90-253-g4428c031d59d623f81747badceebcc409bd19d67
 - kind: patch
   path: patches/plasma-workspace/0001-make-qt6location-optional.patch
 - kind: patch
