@@ -103,7 +103,7 @@ sources:
 - kind: git_repo
   url: kde:plasma/kwin.git
   track: master
-  ref: v6.6.90-264-g1ad316036405196854cf72cfff831e33ef594d46
+  ref: v6.6.90-265-g724b573ffb472e47ea284c399e92139c1ec06380
 - kind: patch
   path: patches/kwin/0001-killer-no-x11.patch
 - kind: patch
