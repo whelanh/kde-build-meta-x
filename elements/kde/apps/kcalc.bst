@@ -46,4 +46,4 @@ sources:
 - kind: git_repo
   url: kde:utilities/kcalc.git
   track: master
-  ref: v24.01.90-444-gc3dbfecf17b49f908f42270ed6a5937f8115bac4
+  ref: v24.01.90-454-g9a15d3a1ccfbd2949592413e26c15f93ae43c0cb

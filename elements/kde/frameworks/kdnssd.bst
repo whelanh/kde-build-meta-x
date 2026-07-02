@@ -17,4 +17,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kdnssd.git
   track: master
-  ref: v6.27.0-rc1-4-g2416ac2601a6cb3ec5cbe49c8bb377955dab89b8
+  ref: v6.27.0-rc1-7-gb25f7fc3f33ba77c8f95d80f726f565df5faf3e2

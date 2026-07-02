@@ -44,4 +44,4 @@ sources:
 - kind: git_repo
   url: kde:utilities/kcharselect.git
   track: master
-  ref: b57d94df4d8575936713be225cdef4d24bb17882
+  ref: v24.01.90-194-g52214d400c64a57baedc5f74dc150c13e687dec5

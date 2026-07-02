@@ -39,4 +39,4 @@ sources:
 - kind: git_repo
   url: kde:plasma/plasma-integration.git
   track: master
-  ref: v6.6.90-18-g8219f009f6460c3551422ed80f1c0ae6796e2ea9
+  ref: v6.6.90-20-g06098adfb08a051cbe96ff411bf73de15b204382

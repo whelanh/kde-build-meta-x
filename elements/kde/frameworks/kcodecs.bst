@@ -17,4 +17,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kcodecs.git
   track: master
-  ref: v6.27.0-rc1-3-g6ffa14153db2e31e52ba0cebf62d620fd8965966
+  ref: v6.27.0-rc1-7-g0862f0cab4c05e23641d1f9f4c49e0f40ab8d13f

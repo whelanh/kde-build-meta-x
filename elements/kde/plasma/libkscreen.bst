@@ -28,5 +28,5 @@ sources:
 - kind: git_repo
   url: kde:plasma/libkscreen.git
   track: master
-  ref: v6.6.90-25-g39462646052bf85e3a1cbcae2612a28db9f45579
+  ref: v6.6.90-35-gc5ada866433e569bc1a5904e2781b2771dab17db
 

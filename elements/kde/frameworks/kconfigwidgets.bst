@@ -24,4 +24,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kconfigwidgets.git
   track: master
-  ref: v6.27.0-rc1-7-g001d2c1dcfdbdef72035cb5ae511fabdd3481d7b
+  ref: v6.27.0-rc1-14-gb1765489c44e5272e269824f8a42f82e2fbacfab

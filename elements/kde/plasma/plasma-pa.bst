@@ -40,4 +40,4 @@ sources:
 - kind: git_repo
   url: kde:plasma/plasma-pa.git
   track: master
-  ref: v6.6.90-12-gc752bcd96c6af71e5a14f240d3949a1c26af0068
+  ref: v6.6.90-13-gf600f19fd33feb38d00f8b279707121f3ea60912

@@ -37,4 +37,4 @@ sources:
 - kind: git_repo
   url: kde:plasma/kpipewire.git
   track: master
-  ref: v6.6.90-8-g68f4d13ed6e59bf0b66d37312aafad8a7ef65cf3
+  ref: v6.6.90-16-g7b07cef5a75b0276961e20134140a9ff4688f386

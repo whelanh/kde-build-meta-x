@@ -69,6 +69,6 @@ sources:
 - kind: git_repo
   url: kde:graphics/gwenview.git
   track: master
-  ref: v24.01.90-532-gbec7c4e8f4f0ebf003ec85d0589e795f5ab21133
+  ref: v24.01.90-535-g930a324c7d12e4a9449e7bdcc949959ffe19f14f
 - kind: patch
   path: patches/gwenview/0002-use-libjpeg62-with-turbo.patch

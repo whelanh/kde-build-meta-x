@@ -17,4 +17,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kglobalaccel.git
   track: master
-  ref: v6.27.0-rc1-3-gee2b6ff5bdc218332cf8f08ca8b26db946d7b68f
+  ref: v6.27.0-rc1-6-gec71bdec7b5adfe995bdec78aa2fc5e970d229b9

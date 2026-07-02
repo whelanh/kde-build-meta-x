@@ -50,4 +50,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/baloo.git
   track: master
-  ref: v6.27.0-rc1-5-g35614d5bff091f4d84b9915f09e1d5d3011985fd
+  ref: v6.27.0-rc1-9-g12c96c4b5a88cd83b97105942047eb7969c32ec5

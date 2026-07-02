@@ -19,4 +19,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/prison.git
   track: master
-  ref: v6.27.0-rc1-2-gb592e80879b799f0ad2313f06614178e65edc1ec
+  ref: v6.27.0-rc1-3-ge09011d9d1d7ad989c2eb22fc95d21a8b97fa77f

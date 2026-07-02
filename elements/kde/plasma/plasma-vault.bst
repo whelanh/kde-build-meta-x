@@ -42,4 +42,4 @@ sources:
 - kind: git_repo
   url: kde:plasma/plasma-vault.git
   track: master
-  ref: v6.6.5-0-gc3b236e5fd8e031aed4beb75f74de3e30d7ebd54
+  ref: v6.6.90-11-g99323261623ef3cc97af7f57e5c4f9bca498b3b6

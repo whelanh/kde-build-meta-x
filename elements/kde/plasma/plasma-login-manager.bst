@@ -90,7 +90,7 @@ sources:
 - kind: git_repo
   url: kde:plasma/plasma-login-manager.git
   track: master
-  ref: v6.6.90-30-gf128489b7adef9be8c7495acbf4fee7dc923722b
+  ref: v6.6.90-34-g364783d9d08375d46910011e95f1570fadf24ddc
 
 config:
   install-commands:

@@ -17,4 +17,4 @@ sources:
 - kind: git_repo
   url: kde:libraries/plasma-wayland-protocols.git
   track: master
-  ref: v1.21.0-1-gbcb9d6ebcf7d43d2565295bec0f4e93d53ffc642
+  ref: v1.21.0-2-g39de7050bd60f104019193a494d819d5eae6ae9b

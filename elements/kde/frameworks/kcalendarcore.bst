@@ -19,4 +19,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kcalendarcore.git
   track: master
-  ref: v6.27.0-rc1-2-gf73477f2bc33ef910afb236b26e770b1bb576489
+  ref: v6.27.0-rc1-4-gcb3ee0c3be7f7e24c667cb88a96d4deade17be23

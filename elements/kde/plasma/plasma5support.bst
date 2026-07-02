@@ -39,4 +39,4 @@ sources:
 - kind: git_repo
   url: kde:plasma/plasma5support.git
   track: master
-  ref: v6.6.90-13-g78353979b25e7b5c3a5ed400e811fbe97febad2e
+  ref: v6.6.90-14-ge06875e33bc679ca57e1de79651045ee970f82d7

@@ -48,4 +48,4 @@ sources:
 - kind: git_repo
   url: kde:utilities/kwalletmanager.git
   track: master
-  ref: f0d5eb6f7649d2f79413383e79677cde1d2a8d68
+  ref: v24.01.90-350-g92b58afbf87e5de23462f2d72b45c11bd6802af3

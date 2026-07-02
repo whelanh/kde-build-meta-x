@@ -54,7 +54,7 @@ sources:
 - kind: git_repo
   url: kde:plasma/kdeplasma-addons.git
   track: master
-  ref: v6.6.90-46-g475232bb8e61860137e4b663693a31a1dbdde02d
+  ref: v6.6.90-55-g180c2febebbb90e464d44e5a651c51534fb2d25a
 - kind: cargo2
   cargo-lock: kdeds/kameleon/qmk/kameleon-qmk-helper/Cargo.lock
   ref:

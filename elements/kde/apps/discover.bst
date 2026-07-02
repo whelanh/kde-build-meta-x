@@ -71,4 +71,4 @@ sources:
 - kind: git_repo
   url: kde:plasma/discover.git
   track: master
-  ref: v6.6.90-63-gd5bdfa6014b7f7a41b574986e1c6a5b59790c017
+  ref: v6.6.90-75-gb12b88a4010849d55911d09096cdb7ca491f1f4a

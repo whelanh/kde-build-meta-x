@@ -26,4 +26,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kiconthemes.git
   track: master
-  ref: v6.27.0-rc1-4-g2c3e807a6cc12696e0538a7b83112e98fae6bd60
+  ref: v6.27.0-rc1-5-g34d5044190d61df9d26e32a0b5b895ade4d87046

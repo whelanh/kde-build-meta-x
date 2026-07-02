@@ -21,4 +21,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kcontacts.git
   track: master
-  ref: v6.27.0-rc1-4-gb1c0fd6c59c796d418e7c81914fbdaa8345a1c1d
+  ref: v6.27.0-rc1-8-g7b0de0be07160b0a178280f23a7170ae7721007a

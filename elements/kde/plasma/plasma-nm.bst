@@ -53,4 +53,4 @@ sources:
 - kind: git_repo
   url: kde:plasma/plasma-nm.git
   track: master
-  ref: v6.6.90-50-ga796efb93f91b9c6c33506f5131e2bf5b8f22193
+  ref: v6.6.90-59-g14715ec9cdf70c6548ac63b6d0e414710bcae9bd

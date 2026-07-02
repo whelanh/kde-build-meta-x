@@ -36,6 +36,6 @@ sources:
 - kind: git_repo
   url: kde:plasma/xdg-desktop-portal-kde.git
   track: master
-  ref: v6.6.90-69-g1f37e0ad0d81f8c23ad633ab09fc7bcd4e6c0fc7
+  ref: v6.6.90-76-g2be9b8c8760cf052cd702675999c935019458b08
 - kind: patch
   path: patches/xdg-desktop-portal-kde/0001-fallback-when-qt-cups-private-header-is-missing.patch

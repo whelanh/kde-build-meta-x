@@ -25,4 +25,4 @@ sources:
 - kind: git_repo
   url: kde:libraries/kirigami-addons.git
   track: master
-  ref: a616992f473a6f393f1188fadd843bd74f872c1b
+  ref: v1.12.1-38-gff691966f2a07828a0c582abc1cc43ab6dea0555

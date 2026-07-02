@@ -28,4 +28,4 @@ sources:
 - kind: git_repo
   url: kde:plasma/plasma-nano.git
   track: master
-  ref: v6.6.90-7-g1ec1af8544fc574facb2752e74f1c3028ba9ba99
+  ref: v6.6.90-8-gd2f4d39d1c40b21dcd4940c406b6f878adf188af

@@ -44,4 +44,4 @@ sources:
 - kind: git_repo
   url: kde:utilities/kfind.git
   track: master
-  ref: 8919a1f36bc2cdfee18f45a9417a1e8e66af34be
+  ref: v24.01.90-293-g59d651fce6a759234a5c60566c7ddb77f343ddd1

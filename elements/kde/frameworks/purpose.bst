@@ -27,4 +27,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/purpose.git
   track: master
-  ref: v6.27.0-rc1-7-gaf444b61dbc3530645b1b04a6b4ff802e139b845
+  ref: v6.27.0-rc1-13-gafb19b658ca6f7e56297db1efb626937edaaf1fc

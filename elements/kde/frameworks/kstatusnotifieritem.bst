@@ -21,4 +21,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kstatusnotifieritem.git
   track: master
-  ref: v6.27.0-rc1-3-gd4954307ccd46fa725e649ebab602dfc0c61832b
+  ref: v6.27.0-rc1-6-g5111e37fb630a4d61dd1e12b7ad9759bff103fee

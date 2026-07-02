@@ -65,6 +65,6 @@ sources:
 - kind: git_repo
   url: kde:graphics/okular.git
   track: master
-  ref: v24.20.85-1020-gbec77aa2bc1842338c54dfa22c5179ae8f5aa68f
+  ref: v24.20.85-1041-g4fa02a32ee7987f257b40814122de406d26c3817
 - kind: patch
   path: patches/okular/0002-dvi-qstringliteral.patch

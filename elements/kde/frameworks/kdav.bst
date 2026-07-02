@@ -19,4 +19,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kdav.git
   track: master
-  ref: v6.27.0-rc1-6-g6d8b5cdc62f58fa61d8abae5bf37c1d7da5c4c61
+  ref: v6.27.0-rc1-10-gd8dfe8383d8861e27261b718cce349645bfb9dc0

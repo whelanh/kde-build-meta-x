@@ -36,5 +36,5 @@ sources:
 - kind: git_repo
   url: kde:plasma/bluedevil.git
   track: master
-  ref: v6.6.90-15-g8e339768268b87068f16c4ebf05486ec6742d6c5
+  ref: v6.6.90-16-ge59037968e41cd8b3e9b53fab1ffb1b991179468
 

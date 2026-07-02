@@ -43,4 +43,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/knewstuff.git
   track: master
-  ref: v6.27.0-rc1-3-g9cf941d40c5760ca1b0daa1b5101c43f90728a13
+  ref: v6.27.0-rc1-7-gaefb85c595de6acc27e16375fa1af9357f7aaf62

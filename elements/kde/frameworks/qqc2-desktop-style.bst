@@ -21,4 +21,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/qqc2-desktop-style.git
   track: master
-  ref: v6.27.0-rc1-4-gb01e832771ac23324fec193d6853355866089099
+  ref: v6.27.0-rc1-6-g497ff546dd27c11061db750ae4d52b0fbfc58019

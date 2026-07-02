@@ -21,4 +21,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/networkmanager-qt.git
   track: master
-  ref: v6.27.0-rc1-1-g73711fb543b109610a24bf7fd781eca2610e3cd7
+  ref: v6.27.0-rc1-2-ge035becf215bf28e686f6593c6ddc0ff053462d3

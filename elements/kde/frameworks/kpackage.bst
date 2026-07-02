@@ -21,4 +21,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kpackage.git
   track: master
-  ref: v6.27.0-rc1-5-g4750e4ec9476ffad83b475a28582b40a45455dae
+  ref: v6.27.0-rc1-7-g65c8ba9021c7c61abf0ee27e791fe0b9578ba80a

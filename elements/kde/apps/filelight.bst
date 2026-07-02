@@ -42,4 +42,4 @@ sources:
 - kind: git_repo
   url: kde:utilities/filelight.git
   track: master
-  ref: e10bad855ad1eaf4a2ec08067b7ae85c36b23ebd
+  ref: v24.01.90-464-gf64ccc44d43e65ebdddae4795211d0dcd642f1f5

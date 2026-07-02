@@ -22,4 +22,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kimageformats.git
   track: master
-  ref: v6.27.0-rc1-8-g081975807cc0f6b4aa36dae12a79a31221a4ae95
+  ref: v6.27.0-rc1-12-ge6bc1af5e4773ed04a5f5cb16a27ed723bba5199

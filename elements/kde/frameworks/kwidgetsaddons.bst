@@ -17,4 +17,4 @@ sources:
 - kind: git_repo
   url: kde:frameworks/kwidgetsaddons.git
   track: master
-  ref: v6.27.0-rc1-5-ga156881b4d4a29f49ac0d36705bdfec32daf85cc
+  ref: v6.27.0-rc1-11-g0e7b826043dfcf96aef53565d164d40a467f4c19
